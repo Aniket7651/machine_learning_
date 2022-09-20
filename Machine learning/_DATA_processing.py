@@ -6,6 +6,7 @@ mainly this file contain programs for basic pre processing
 """
 
 # nessesary imports
+from cProfile import label
 import csv
 
 
@@ -22,16 +23,33 @@ class load_csv():
         try:
             # step to store data in row list variable
             rows = []
+
+            def float_type(point):
+                floats = []
+                try:
+                    for i in point:
+                        floats.append(float(i))
+                except ValueError:
+                    pass
+                return floats
+
+            def float_type_each(point):
+                try:
+                    floats = float(point)
+                except ValueError:
+                    pass
+                return floats
+
             # open file and manipulate as csvf instance
             with open(self.file, 'r') as csvf:
                 for row in csv.reader(csvf):
-                    # check if all column is set 
+                    # check if all column is se
                     # print all row 
                     if column == 'all':
-                        rows.append(row[:])
-                    # else print a single particular column 
+                        rows.append([i for i in float_type(row[:])])
                     else:
-                        rows.append(row[column])
+                        # else print a single particular column
+                        rows.append(float_type_each(row[column]))
                 # close the csv file
                 csvf.close()
             # check if upto selected all
@@ -45,7 +63,42 @@ class load_csv():
             # return error if you are selected wrong column
             return f"column {column} not exist in your dataset"
     
-    # this basic for finding data rows upto your desired numbers from upper side
+    def featured_dataset(self, upto='all'):
+        try:
+            # making empty to store feature in rows and lables in lable list
+            feature = []
+            lable = []
+            def float_type(point):
+                floats = []
+                try:
+                    for i in point:
+                        floats.append(float(i))
+                except ValueError:
+                    pass
+                return floats
+
+            # open file and manipulate as csvf instance
+            with open(self.file, 'r') as csvf:
+                for row in csv.reader(csvf):
+                     
+                    # print all row 
+                    # select all column except last most..
+                    feature.append([i for i in float_type(row[:-1])])
+                    # last column is selected as lables
+                    lable.append(row[-1])
+                # close the csv file
+                csvf.close()
+            # check if upto selected all
+            # it's return all row
+            if upto == 'all':
+                return feature[1:], lable[1:]
+            else:
+                # else return row upto, where you are selected
+                return feature[1:upto+1], lable[1:upto+1]
+        except IndexError:
+            # return error if you are selected wrong column or row
+            return "unexpected column/row in your dataset"
+
     def top(self, upto):
         select = self.dataset()
         return select[:upto]
@@ -194,5 +247,6 @@ p = [0,0,0,1,0,1,1,0,1,0]
 set = [3, 6, 9, 2, 7]
 # print(loss_function(pd, at).SSE())
 # print(covarince(at, pd))
+# print(load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/iris.csv').featured_dataset())
 # print(load_csv(file).tail(2))
 # print(statistics(set).standard_dev())

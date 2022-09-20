@@ -4,9 +4,9 @@ This file have different type of machine learning algorithms
 @author: ANIKET YADAV
 """
 
-from math import exp
+from math import exp, log2
 import _DATA_processing as ln
-from find_Distances_ import euclidean
+from find_Distances_ import euclidean, manhatten, cosine
 
 class pre_processing():
     '''pre processing class is use for feature engineering creating the features and labels, 
@@ -122,17 +122,126 @@ def neural_gradient(x_i, y_i, y_i_p, bias=1.0, alpha=1.0):
     return w_i, w_bias, error
     
 
+class kNN():
+
+    def __init__(self, x_i, X):
+        self.x_i = x_i
+        self.x = X
+
+    def _distance(self, distance):
+        distance = []
+        if distance == 'manhatten':
+            for i in self.x_i:
+                distance.append(manhatten(i, self.x))
+        elif distance == 'cosine':
+            for i in self.x_i:
+                distance.append(cosine(i, self.x))
+        else:
+            for i in self.x_i:
+                distance.append(euclidean(i, self.x))
+        
+        return sorted(distance), distance
+
+    def nearest(self, y_i, k, distance='euclidean'):
+        sorted_list, distance_list = self._distance(distance)
+        (lable_, unique, unique_count) = ([], [], [])
+        for i in range(k):
+            _index_ = distance_list.index(sorted_list[i])
+            lable_.append(y_i[_index_])
+        
+        for i in lable_:
+            if i not in unique:
+                unique.append(i)
+            else:
+                pass
+        for i in unique:
+            unique_count.append(lable_.count(i))
+        return unique[unique_count.index(max(unique_count))], {k:v for k,v in zip(unique, unique_count)}
+
+
+class Decision_tree():
+
+    def __init__(self, y):
+        self.y = y
+
+    def find_unique(self, x):
+        unique = []
+        for u in x:
+            if u not in unique:
+                unique.append(u)
+            else:
+                pass
+        return unique
+
+    def ID3(self, col):
+        S = len(col)
+        (unique_count, id3_S) = ([],[])
+        
+        for i in self.find_unique(col):
+            unique_count.append(col.count(i))
+        for item in unique_count:
+            id3_S.append(item/S)
+        return id3_S, self.find_unique(col)
+
+    def entropy(self, attribute):
+        entropyy = 0.0
+        for i in self.ID3(attribute)[0]:
+            entropyy += -i*log2(i)*1/i
+        return entropyy
+
+    def lable_split(self, attribute, lable_attrY='y', lable_atterN='n'):
+        (counter_yes, counter_no) = ([], [])
+        (feature_yes, feature_no) = ([], [])
+    
+        for u in self.find_unique(attribute):
+            for i in range(len(attribute)):
+                if attribute[i] == u and self.y[i] == lable_attrY:
+                    feature_yes.append('%s'%u)
+                if attribute[i] == u and self.y[i] == lable_atterN:
+                    feature_no.append('%s'%u)
+        
+            counter_yes.append(feature_yes.count(u))
+            counter_no.append(feature_no.count(u))
+        return counter_yes, counter_no
+
+    def information_gain(self, attribute, lable_attrY='y', lable_atterN='n'):
+        feature_entropy_ID = 0.0
+        _attribute_yes = self.lable_split(attribute, lable_attrY, lable_atterN)[0]
+        _attribute_no = self.lable_split(attribute, lable_attrY, lable_atterN)[1]
+        id3_P = self.ID3(attribute)[0]
+
+        def f_entropy(attr, yes_, no_):
+            entropy = []
+            unique_count = []
+            for i in self.find_unique(attr):
+                unique_count.append(attr.count(i))
+
+            for i in range(len(unique_count)):
+                entropy.append(-(yes_[i]/unique_count[i])*log2(yes_[i]/unique_count[i])-no_[i]/unique_count[i]*log2(no_[i]/unique_count[i]))
+            return entropy
+
+        feature_entopy = f_entropy(attribute, _attribute_yes, _attribute_no)
+        for i in range(len(id3_P)):
+            feature_entropy_ID += id3_P[i]*feature_entopy[i]
+        return self.entropy(self.y)-feature_entropy_ID
+
 
 ############################################ END OF THE PROGRAM #################################################
 
-x_i = [12.3, 23.3, 34.4, 45.6, 66.67, 56.7, 76.5]
-y_i = [21.4, 20.0, 23.4, 45.5, 56.6, 34.4, 45.65]
-a = [0,1,1,0,1,1,1,0,0,1]
-p = [0,0,0,1,0,1,1,0,1,0]
+test = [[5.1, 3.5, 1.4, 0.2], [4.9, 3.0, 1.4, 0.2], [4.7, 3.2, 1.3, 0.2], 
+        [4.6, 3.1, 1.5, 0.2], [5, 3.6, 1.4, 0.2], [5.4, 3.9, 1.7, 0.4], 
+        [4.6, 3.4, 1.4, 0.3], [5, 3.4, 1.5, 0.2], [4.4, 2.9, 1.4, 0.2], [4.9, 3.1, 1.5, 0.1]]
+sample = [4.60,3.20,1.40,0.20]
+X = ['m','w','w','s','s','s','w','m','s','s','w','s','w','w','m','s']
+Y = ['y','y','y','n','y','y','n','y','y','n','n','y','n','y','n','y']
 p1 = [0,1,0,1,1,1,1,0,0,0]
-
+# print(unique)
 # w, b = train_model(x_i, y_i, 0.0, 0.0, 7, 1)
-print(gaussian_kernal(25.344555))
+# print(gaussian_kernal(25.344555))
 # print(activation_(0.21020000).tanh())
 # print(perceptron(a, p))
+x_, y_ = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/iris.csv').featured_dataset()
+# print(x_, y_)
+# print(kNN(x_, sample).nearest(y_, k=7))
+print(Decision_tree(Y).information_gain(X))
 # print(neural_gradient(a, p1, p))
