@@ -13,8 +13,8 @@ class pre_processing():
     the problem of converting raw data to a dataset which can be
     read by machine is called feature engineering.'''
 
-    def __init__(self, x_set):
-        self.x = x_set
+    def __init__(self, x_i):
+        self.x = x_i
 
     def standardization(self):
         standardize = []
@@ -174,9 +174,8 @@ class Decision_tree():
         return unique
 
     def ID3(self, col):
-        S = len(col)
         (unique_count, id3_S) = ([],[])
-        
+        S = len(col)
         for i in self.find_unique(col):
             unique_count.append(col.count(i))
         for item in unique_count:
@@ -189,7 +188,7 @@ class Decision_tree():
             entropyy += -i*log2(i)*1/i
         return entropyy
 
-    def lable_split(self, attribute, lable_attrY='y', lable_atterN='n'):
+    def lable_split(self, attribute, lable_attrY='Yes', lable_atterN='No'):
         (counter_yes, counter_no) = ([], [])
         (feature_yes, feature_no) = ([], [])
     
@@ -204,26 +203,29 @@ class Decision_tree():
             counter_no.append(feature_no.count(u))
         return counter_yes, counter_no
 
-    def information_gain(self, attribute, lable_attrY='y', lable_atterN='n'):
-        feature_entropy_ID = 0.0
-        _attribute_yes = self.lable_split(attribute, lable_attrY, lable_atterN)[0]
-        _attribute_no = self.lable_split(attribute, lable_attrY, lable_atterN)[1]
-        id3_P = self.ID3(attribute)[0]
+    def information_gain(self, attribute, lable_attrY='Yes', lable_atterN='No'):
+        try:
+            feature_entropy_ID = 0.0
+            _attribute_yes = self.lable_split(attribute, lable_attrY, lable_atterN)[0]
+            _attribute_no = self.lable_split(attribute, lable_attrY, lable_atterN)[1]
+            id3_P = self.ID3(attribute)[0]
 
-        def f_entropy(attr, yes_, no_):
-            entropy = []
-            unique_count = []
-            for i in self.find_unique(attr):
-                unique_count.append(attr.count(i))
-
-            for i in range(len(unique_count)):
-                entropy.append(-(yes_[i]/unique_count[i])*log2(yes_[i]/unique_count[i])-no_[i]/unique_count[i]*log2(no_[i]/unique_count[i]))
-            return entropy
-
-        feature_entopy = f_entropy(attribute, _attribute_yes, _attribute_no)
-        for i in range(len(id3_P)):
-            feature_entropy_ID += id3_P[i]*feature_entopy[i]
-        return self.entropy(self.y)-feature_entropy_ID
+            def f_entropy(attr, yes_, no_):
+                entropy = []
+                unique_count = []
+                for i in self.find_unique(attr):
+                    unique_count.append(attr.count(i))
+                
+                for i in range(len(unique_count)):
+                    entropy.append(-(yes_[i]/unique_count[i])*log2(yes_[i]/unique_count[i])-no_[i]/unique_count[i]*log2(no_[i]/unique_count[i]))
+                return entropy
+            
+            feature_entopy = f_entropy(attribute, _attribute_yes, _attribute_no)
+            for i in range(len(id3_P)):
+                feature_entropy_ID += id3_P[i]*feature_entopy[i]
+            return self.entropy(self.y)-feature_entropy_ID
+        except ValueError:               # math domain error log2(0) = -infinite
+                return 'Input having some errors or too sort'
 
 
 ############################################ END OF THE PROGRAM #################################################
@@ -231,17 +233,24 @@ class Decision_tree():
 test = [[5.1, 3.5, 1.4, 0.2], [4.9, 3.0, 1.4, 0.2], [4.7, 3.2, 1.3, 0.2], 
         [4.6, 3.1, 1.5, 0.2], [5, 3.6, 1.4, 0.2], [5.4, 3.9, 1.7, 0.4], 
         [4.6, 3.4, 1.4, 0.3], [5, 3.4, 1.5, 0.2], [4.4, 2.9, 1.4, 0.2], [4.9, 3.1, 1.5, 0.1]]
-sample = [4.60,3.20,1.40,0.20]
+sample = [6.9, 3.1, 4.9, 1.5]
 X = ['m','w','w','s','s','s','w','m','s','s','w','s','w','w','m','s']
 Y = ['y','y','y','n','y','y','n','y','y','n','n','y','n','y','n','y']
 p1 = [0,1,0,1,1,1,1,0,0,0]
-# print(unique)
 # w, b = train_model(x_i, y_i, 0.0, 0.0, 7, 1)
 # print(gaussian_kernal(25.344555))
 # print(activation_(0.21020000).tanh())
 # print(perceptron(a, p))
-x_, y_ = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/iris.csv').featured_dataset()
-# print(x_, y_)
-# print(kNN(x_, sample).nearest(y_, k=7))
-print(Decision_tree(Y).information_gain(X))
+x_, y_ = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/dicisionDataset.csv').text_csv()
+xF, yF = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/iris.csv').featured_dataset()
+# print(y_)
+print(kNN(xF, sample).nearest(yF, k=55))
+(outlook, temp, humidity, wind) = ([], [], [], [])
+for i in range(len(x_)):
+    (outlook.append(x_[i][0]), temp.append(x_[i][1]), humidity.append(x_[i][2]), wind.append(x_[i][3]))
+    
+print('outlook: ', Decision_tree(y_).information_gain(outlook))
+print('temprature: ', Decision_tree(y_).information_gain(temp))
+print('humidity: ', Decision_tree(y_).information_gain(humidity))
+print('wind: ', Decision_tree(y_).information_gain(wind))
 # print(neural_gradient(a, p1, p))

@@ -6,12 +6,17 @@ mainly this file contain programs for basic pre processing
 """
 
 # nessesary imports
-from cProfile import label
 import csv
 
 
 # block of program for reading csv file
 class load_csv():
+    """
+    class contain many types of methods which use to read data.
+    by load_csv([PATH_OF_FILE]).dataset(column, upto[row]) also read dataset and seperate feature and lable
+    through load_csv([PATH_OF_FILE]).featured_dataset(upto[rows]), can also use top function(upto), and tail(upto) function
+    rows upto you are selected
+    """
     # specifying path by init
     def __init__(self, file_path):
         self.file = file_path
@@ -20,19 +25,24 @@ class load_csv():
     # column = all ----- for represent all the column take's only all, and other's integer
     # upto = all ------- for representing all the data of a csv file, row also take's only all, and other's integer
     def dataset(self, column='all', upto='all'):
+        '''read dataset with column number and upto rows number by default it's set on the all column 
+        and all rows, but we can use number of column and rows'''
         try:
             # step to store data in row list variable
             rows = []
-
+            # creating a function for converting string to floating point for allowing machine readable
             def float_type(point):
                 floats = []
                 try:
+                    # converting each itration to floats
                     for i in point:
                         floats.append(float(i))
                 except ValueError:
+                    # except pass value error 
                     pass
                 return floats
 
+            # float converting each point not including j-dimension
             def float_type_each(point):
                 try:
                     floats = float(point)
@@ -64,6 +74,8 @@ class load_csv():
             return f"column {column} not exist in your dataset"
     
     def featured_dataset(self, upto='all'):
+        '''featured dataset is allow to split features and lable returns two value one is feature and second is
+        lable with arguments of rows'''
         try:
             # making empty to store feature in rows and lables in lable list
             feature = []
@@ -100,6 +112,7 @@ class load_csv():
             return "unexpected column/row in your dataset"
 
     def top(self, upto):
+        '''function use for read top of the data upto desired rows'''
         select = self.dataset()
         return select[:upto]
 
@@ -108,6 +121,31 @@ class load_csv():
         select = self.dataset()
         return select[-upto:]
 
+    def text_csv(self, upto='all'):
+        '''To use for loading text data, if csv have text, character data which is exactly a string type
+        load_csv(PATH_OF_FILE).text_csv(upto[rows])'''
+        try:
+            feature = []
+            lable = []
+            with open(self.file, 'r') as csvf:
+                for row in csv.reader(csvf):
+                    # print all row 
+                    # select all column except last most..
+                    feature.append(row[:-1])
+                    # last column is selected as lables
+                    lable.append(row[-1])
+                # close the csv file
+                csvf.close()
+                # check if upto selected all
+                # it's return all row
+            if upto == 'all':
+                return feature[1:], lable[1:]
+            else:
+                # else return row upto, where you are selected
+                return feature[1:upto+1], lable[1:upto+1]
+        except IndexError:
+            # return error if you are selected wrong column or row
+            return "unexpected column/row in your dataset"
 
 # there are many types of loss functions which use for finding accuracy of our alorithems
 # this is our goal to reduse error of our model by decrease losses, to getting the optimum value '*w' and '*b' 
@@ -247,6 +285,6 @@ p = [0,0,0,1,0,1,1,0,1,0]
 set = [3, 6, 9, 2, 7]
 # print(loss_function(pd, at).SSE())
 # print(covarince(at, pd))
-# print(load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/iris.csv').featured_dataset())
+# print(load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/dicisionDataset.csv').text_csv())
 # print(load_csv(file).tail(2))
 # print(statistics(set).standard_dev())
