@@ -39,14 +39,44 @@ def gradient_descent(x, y, w, b, alpha=0.0001):
     w_d = 0.0
     b_d = 0.0
     N = len(x)
-    for i in range(N):
-        w_d += -2*x[i]*(y[i]-(w*x[i]+b))
-        b_d += -2*(y[i]-(w*x[i]+b))
+    for j in range(N):
+        w_d += -2*x[j]*(y[j]-(w*x[j]+b))
+        b_d += -2*(y[j]-(w*x[j]+b))
 
     w = w - (1/float(N))*w_d*alpha
     b = b - (1/float(N))*b_d*alpha
     return w, b
+
+
+class multivariate_descent():
     
+    def h0_x(self, X, b, W):
+        h0 = 0.0
+        for x, w in zip(X, W):
+            h0 += x*w
+        return h0+b
+
+    def cost_F(self, h0x, x_j, y_i):
+        loss = 0.0
+        for j in x_j:
+            loss += (h0x-y_i)*j
+        return loss
+
+    def GD(self, loss, W, instance, lr):
+        theta_w = []
+        for j in W:
+            theta_w.append(j-lr*loss/instance)
+        return theta_w
+
+    def gradient_descent(self, X, b, W, Y, lr=0.01):
+        WUpdate = []
+        for i in range(len(X)):
+            h0 = self.h0_x(X[i], b, W)
+            cost = self.cost_F(h0, X[i], Y[i])
+            print(cost)
+            WUpdate.append(self.GD(cost, W, len(X), lr))
+        return WUpdate
+
 
 def train_model(x, y, w, b, epoch, check_loss, alpha=0.0001):
     for i in range(epoch):
@@ -56,13 +86,27 @@ def train_model(x, y, w, b, epoch, check_loss, alpha=0.0001):
     return w, b
 
 
-def linear_prediction(x_i, w_i, b):
-    return w_i*x_i + b
+class LinearRegression():
 
+    def linear_prediction(self, x_i, w_i, b):
+        return w_i*x_i + b
 
-def logistic_prediction(x_i, w_i, b):
-    p = 1.0 + exp(-w_i*x_i + b)
-    return 1.0/p
+    def multivariate_prediction(self, X, W, b):
+        wx = 0.0
+        for i in range(len(X)):
+            wx += X[i]*W[i]
+        return wx+b
+
+class LogisticRegression():
+
+    def logistic_prediction(self, x_i, w_i, b):
+        p = 1.0 + exp(-w_i*x_i + b)
+        return 1.0/p
+
+    def multivariate_prediction(self, X, W, b):
+        linear_ = LinearRegression().multivariate_prediction(X, W, b)
+        p = 1.0 + exp(linear_)
+        return 1.0/p
 
 
 def gaussian_kernal(z, bandwidth=1.0):
@@ -84,43 +128,6 @@ def krenel_gradient(x, X, b, bw=1.0):
 def kernal_regression(w_i, Y):
     return sum(w_i*Y)/len(Y)
 
-
-class activation_():
-    
-    def __init__(self, y_i):
-        self.y = y_i
-    
-    def tanh(self):
-        return (exp(self.y)-exp(-self.y))/(exp(self.y)+exp(-self.y))
-
-    def relu(self):
-        if self.y < 0:
-            return 0
-        else:
-            return self.y
-
-    def sig(self):
-        return 1.0/1.0 + exp(-self.y)
-
-
-def perceptron(x_i, w_i, bias=1):
-    y_ = 0.0
-    for j in range(len(x_i)):
-        y_ += w_i[j]*x_i[j]
-    Y = y_ + bias
-    return activation_(Y).sig()
-
-
-def neural_gradient(x_i, y_i, y_i_p, bias=1.0, alpha=1.0):
-    error = []
-    w_i = []
-    w_bias = 0.0
-    for i in range(len(x_i)):
-        error.append(float(y_i[i]-y_i_p[i]))
-        w_i.append(error[i]*x_i[i]*alpha)
-        w_bias += error[i]*bias*alpha
-    return w_i, w_bias, error
-    
 
 class kNN():
 
@@ -173,20 +180,21 @@ class Decision_tree():
                 pass
         return unique
 
-    def ID3(self, col):
+    def ID3(self, attribute):
         (unique_count, id3_S) = ([],[])
-        S = len(col)
-        for i in self.find_unique(col):
-            unique_count.append(col.count(i))
+        S = len(attribute)
+        for i in self.find_unique(attribute):
+            unique_count.append(attribute.count(i))
         for item in unique_count:
             id3_S.append(item/S)
-        return id3_S, self.find_unique(col)
+        return id3_S, self.find_unique(attribute)
 
-    def entropy(self, attribute):
-        entropyy = 0.0
-        for i in self.ID3(attribute)[0]:
-            entropyy += -i*log2(i)*1/i
-        return entropyy
+    def entropy(self, ID3_yes, ID3_no):
+        if ID3_yes and ID3_no == 0:
+            return 0.0
+        else:
+            entropyy = -(ID3_yes*log2(ID3_yes))-(ID3_no*log2(ID3_no))
+            return entropyy
 
     def lable_split(self, attribute, lable_attrY='Yes', lable_atterN='No'):
         (counter_yes, counter_no) = ([], [])
@@ -203,29 +211,62 @@ class Decision_tree():
             counter_no.append(feature_no.count(u))
         return counter_yes, counter_no
 
-    def information_gain(self, attribute, lable_attrY='Yes', lable_atterN='No'):
-        try:
-            feature_entropy_ID = 0.0
-            _attribute_yes = self.lable_split(attribute, lable_attrY, lable_atterN)[0]
-            _attribute_no = self.lable_split(attribute, lable_attrY, lable_atterN)[1]
-            id3_P = self.ID3(attribute)[0]
+    def Multiple_entropy(self, attribute, lable_Yes='Yes', lable_No='No'):
+        S_a = len(attribute)
+        entopy = 0.0
+        _attribute_yes = self.lable_split(attribute, lable_Yes, lable_No)[0]
+        _attribute_no = self.lable_split(attribute, lable_Yes, lable_No)[1]
+        T = [y+n for y, n in zip(_attribute_yes, _attribute_no)]
+        for i in range(len(_attribute_yes)):
+            (y, n) = (_attribute_yes[i]/S_a, _attribute_no[i]/S_a)
+            E = self.entropy(y, n)
+            entopy += (T[i]/S_a)*E
+        return entopy
 
-            def f_entropy(attr, yes_, no_):
-                entropy = []
-                unique_count = []
-                for i in self.find_unique(attr):
-                    unique_count.append(attr.count(i))
-                
-                for i in range(len(unique_count)):
-                    entropy.append(-(yes_[i]/unique_count[i])*log2(yes_[i]/unique_count[i])-no_[i]/unique_count[i]*log2(no_[i]/unique_count[i]))
-                return entropy
-            
-            feature_entopy = f_entropy(attribute, _attribute_yes, _attribute_no)
-            for i in range(len(id3_P)):
-                feature_entropy_ID += id3_P[i]*feature_entopy[i]
-            return self.entropy(self.y)-feature_entropy_ID
-        except ValueError:               # math domain error log2(0) = -infinite
-                return 'Input having some errors or too sort'
+    def Gain(self, attribute, lable_Yes='Yes', lable_No='No'):
+        ID3 = self.ID3(self.y)[0]
+        E_S = self.entropy(ID3[0], ID3[1])
+        E_Sa = self.Multiple_entropy(attribute, lable_Yes, lable_No)
+        return E_S-E_Sa
+
+
+class Naive_Bayes():
+
+    def __init__(self, Y):
+        self.y = Y
+
+    def lable_probability(self):
+        Total = len(self.y)
+        yes, no = Decision_tree(self.y).lable_split(self.y)
+        (probability_yes, probability_no) = (0, 0)
+        for i in range(len(yes)):
+            probability_yes += yes[i]
+            probability_no += no[i]
+        return probability_yes/Total, probability_no/Total
+
+    def attribute_probability(self, attribute):
+        yes, no = Decision_tree(self.y).lable_split(attribute)
+        (yes_count, no_count) = (0, 0)
+        for i in range(len(yes)):
+            yes_count += yes[i]
+            no_count += no[i]
+        unique = Decision_tree(self.y).find_unique(attribute)
+        (p_Y, p_N) = ([], [])
+        for y, n in zip(yes, no):
+            (p_Y.append(y/yes_count), p_N.append(n/no_count))
+        return {k:v for k, v in zip(unique, p_Y)}, {k:v for k, v in zip(unique, p_N)}
+    
+    def Bayes(self, sample, *attributes):
+        (p_yes, p_no) = (1.0, 1.0)
+        _Yes, _No = self.lable_probability()
+        for atter, s in zip(attributes, sample):
+            yes, no = self.attribute_probability(atter)
+            p_yes *= yes[s]
+            p_no *= no[s]
+        Yes = (p_yes*_Yes)/((p_yes*_Yes)+(p_no*_No))
+        No = 1-Yes
+        lable_dict = {Yes: 'Yes', No: 'No'}
+        return lable_dict[max(Yes, No)], max(Yes, No)
 
 
 ############################################ END OF THE PROGRAM #################################################
@@ -237,20 +278,25 @@ sample = [6.9, 3.1, 4.9, 1.5]
 X = ['m','w','w','s','s','s','w','m','s','s','w','s','w','w','m','s']
 Y = ['y','y','y','n','y','y','n','y','y','n','n','y','n','y','n','y']
 p1 = [0,1,0,1,1,1,1,0,0,0]
-# w, b = train_model(x_i, y_i, 0.0, 0.0, 7, 1)
+# w, b = train_model(test[0], sample[0], 0.0, 0.0, 4, 1)
 # print(gaussian_kernal(25.344555))
 # print(activation_(0.21020000).tanh())
-# print(perceptron(a, p))
 x_, y_ = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/dicisionDataset.csv').text_csv()
 xF, yF = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/iris.csv').featured_dataset()
-# print(y_)
-print(kNN(xF, sample).nearest(yF, k=55))
-(outlook, temp, humidity, wind) = ([], [], [], [])
-for i in range(len(x_)):
-    (outlook.append(x_[i][0]), temp.append(x_[i][1]), humidity.append(x_[i][2]), wind.append(x_[i][3]))
-    
-print('outlook: ', Decision_tree(y_).information_gain(outlook))
-print('temprature: ', Decision_tree(y_).information_gain(temp))
-print('humidity: ', Decision_tree(y_).information_gain(humidity))
-print('wind: ', Decision_tree(y_).information_gain(wind))
-# print(neural_gradient(a, p1, p))
+
+X = [[5.1, 3.5, 1.4, 0.2], [4.9, 3.0, 1.4, 0.2], [4.7, 3.2, 1.3, 0.2], 
+        [4.6, 3.1, 1.5, 0.2], [5, 3.6, 1.4, 0.2], [5.4, 3.9, 1.7, 0.4]]
+Y = [0.072636, 3.172632, 4.9232334, 1.517612, 8.287214, 2.0292334]
+W = [0.0, 0.0, 0.0, 0.0]     # [random.random(), random.random(), random.random(), random.random()]
+
+print(multivariate_descent().gradient_descent(X, -3.87876, W, Y))
+# print(kNN(xF, sample).nearest(yF, k=55))
+# (outlook, temp, humidity, wind) = ([], [], [], [])
+# for i in range(len(x_)):
+#     (outlook.append(x_[i][0]), temp.append(x_[i][1]), humidity.append(x_[i][2]), wind.append(x_[i][3]))
+# print('outlook:    ', Decision_tree(y_).Gain(outlook))
+# print('temprature: ', Decision_tree(y_).Gain(temp))
+# print('humidity:   ', Decision_tree(y_).Gain(humidity))
+# print('wind:       ', Decision_tree(y_).Gain(wind))
+# print(Naive_Bayes(y_).Bayes(['Sunny', 'Hot'], outlook, temp))
+# print(Decision_tree(y_).lable_split(x))

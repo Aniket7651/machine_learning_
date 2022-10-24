@@ -118,7 +118,9 @@ class load_csv():
 
     # this is same from above fuction but, it's use to read data rows from downward side (tail)
     def tail(self, upto):
+        '''returns last most desired data points thsts, take argument as upto[rows]'''
         select = self.dataset()
+        # -upto: is use for last point in list to be read upto ....
         return select[-upto:]
 
     def text_csv(self, upto='all'):
@@ -219,7 +221,14 @@ class loss_function():
         return hinge
 
 
+# statistics use formulas that's find mean, median, variance and std. deviation
+# takes a list of feature 'X' return output as float
+# but in the case of median it's returns 
 class statistics():
+    """
+    statistics class function is use for the performing basic task about, finding mean or the avg. value of set, variance,
+    median and standard deviation.
+    """
     def __init__(self, x_set):
         self.x = x_set
         self.N = len(x_set)
@@ -287,4 +296,4 @@ set = [3, 6, 9, 2, 7]
 # print(covarince(at, pd))
 # print(load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/dicisionDataset.csv').text_csv())
 # print(load_csv(file).tail(2))
-# print(statistics(set).standard_dev())
+# print(statistics(pd).mean())
