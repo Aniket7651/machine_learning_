@@ -1,0 +1,612 @@
+ns1:SourceID,ns1:Name,ns1:URL,ns1:String
+DB00945,Acetylsalicylic acid,https://www.drugbank.ca/drugs/DB00945,3.5
+DB00007,Leuprolide,https://www.drugbank.ca/drugs/DB00007,9.6
+DB00091,Cyclosporine,https://www.drugbank.ca/drugs/DB00091,13.32±0.70
+DB00104,Octreotide,https://www.drugbank.ca/drugs/DB00104,12.60
+DB00115,Cyanocobalamin,https://www.drugbank.ca/drugs/DB00115,"1.84, 8.77"
+DB00117,Histidine,https://www.drugbank.ca/drugs/DB00117,2.76 (at 0 °C)
+DB00119,Pyruvic acid,https://www.drugbank.ca/drugs/DB00119,2.45 (at 25 °C)
+DB00120,Phenylalanine,https://www.drugbank.ca/drugs/DB00120,1.24 (at 25 °C)
+DB00123,Lysine,https://www.drugbank.ca/drugs/DB00123,3.12 (at 0 °C)
+DB00125,Arginine,https://www.drugbank.ca/drugs/DB00125,2.24 (at 0 °C)
+DB00126,Ascorbic acid,https://www.drugbank.ca/drugs/DB00126,4.7 (at 10 °C)
+DB00128,Aspartic acid,https://www.drugbank.ca/drugs/DB00128,2.01 (at 0 °C)
+DB00129,Ornithine,https://www.drugbank.ca/drugs/DB00129,1.94 (at 25 °C)
+DB00130,L-Glutamine,https://www.drugbank.ca/drugs/DB00130,2.17
+DB00133,Serine,https://www.drugbank.ca/drugs/DB00133,2.21 (at 25 °C)
+DB00134,Methionine,https://www.drugbank.ca/drugs/DB00134,2.28 (at 25 °C)
+DB00135,Tyrosine,https://www.drugbank.ca/drugs/DB00135,2.2 (at 25 °C)
+DB00138,Cystine,https://www.drugbank.ca/drugs/DB00138,1.00
+DB00139,Succinic acid,https://www.drugbank.ca/drugs/DB00139,4.21 (at 25 °C)
+DB00140,Riboflavin,https://www.drugbank.ca/drugs/DB00140,10.2
+DB00142,Glutamic acid,https://www.drugbank.ca/drugs/DB00142,2.23 (at 0 °C)
+DB00145,Glycine,https://www.drugbank.ca/drugs/DB00145,2.37 (at 20 °C)
+DB00149,Leucine,https://www.drugbank.ca/drugs/DB00149,2.35 (at 13 °C)
+DB00150,Tryptophan,https://www.drugbank.ca/drugs/DB00150,7.38 (at 25 °C)
+DB00151,Cysteine,https://www.drugbank.ca/drugs/DB00151,1.71
+DB00153,Ergocalciferol,https://www.drugbank.ca/drugs/DB00153,6.35
+DB00155,Citrulline,https://www.drugbank.ca/drugs/DB00155,2.43 (at 25 °C)
+DB00156,Threonine,https://www.drugbank.ca/drugs/DB00156,5.60
+DB00160,Alanine,https://www.drugbank.ca/drugs/DB00160,2.34 (at 25 °C)
+DB00161,Valine,https://www.drugbank.ca/drugs/DB00161,2.3 (at 13 °C)
+DB00167,Isoleucine,https://www.drugbank.ca/drugs/DB00167,2.37 (at 0 °C)
+DB00173,Adenine,https://www.drugbank.ca/drugs/DB00173,4.15 (at 25 °C)
+DB00174,Asparagine,https://www.drugbank.ca/drugs/DB00174,8.82 (at 18 °C)
+DB00175,Pravastatin,https://www.drugbank.ca/drugs/DB00175,4.2
+DB00177,Valsartan,https://www.drugbank.ca/drugs/DB00177,4.73
+DB00181,Baclofen,https://www.drugbank.ca/drugs/DB00181,9.62 + 0.1 (amino group) and 3.87 + 0.1 (carboxyl group)
+DB00182,Amphetamine,https://www.drugbank.ca/drugs/DB00182,9.9
+DB00184,Nicotine,https://www.drugbank.ca/drugs/DB00184,8.5
+DB00186,Lorazepam,https://www.drugbank.ca/drugs/DB00186,13
+DB00190,Carbidopa,https://www.drugbank.ca/drugs/DB00190,2.3
+DB00191,Phentermine,https://www.drugbank.ca/drugs/DB00191,9.84
+DB00193,Tramadol,https://www.drugbank.ca/drugs/DB00193,9.41
+DB00195,Betaxolol,https://www.drugbank.ca/drugs/DB00195,9.4
+DB00196,Fluconazole,https://www.drugbank.ca/drugs/DB00196,1.76
+DB00199,Erythromycin,https://www.drugbank.ca/drugs/DB00199,8.88
+DB00201,Caffeine,https://www.drugbank.ca/drugs/DB00201,14
+DB00205,Pyrimethamine,https://www.drugbank.ca/drugs/DB00205,7.34 (at 20 °C)
+DB00206,Reserpine,https://www.drugbank.ca/drugs/DB00206,6.6
+DB00207,Azithromycin,https://www.drugbank.ca/drugs/DB00207,8.5
+DB00211,Midodrine,https://www.drugbank.ca/drugs/DB00211,7.8
+DB00213,Pantoprazole,https://www.drugbank.ca/drugs/DB00213,3.92 and 8.19
+DB00214,Torasemide,https://www.drugbank.ca/drugs/DB00214,7.1
+DB00215,Citalopram,https://www.drugbank.ca/drugs/DB00215,9.78
+DB00227,Lovastatin,https://www.drugbank.ca/drugs/DB00227,13.49
+DB00232,Methyclothiazide,https://www.drugbank.ca/drugs/DB00232,9.4
+DB00233,Aminosalicylic acid,https://www.drugbank.ca/drugs/DB00233,2.05 (at 25 °C)
+DB00243,Ranolazine,https://www.drugbank.ca/drugs/DB00243,2.2
+DB00245,Benzatropine,https://www.drugbank.ca/drugs/DB00245,10
+DB00250,Dapsone,https://www.drugbank.ca/drugs/DB00250,2.41
+DB00252,Phenytoin,https://www.drugbank.ca/drugs/DB00252,8.33
+DB00254,Doxycycline,https://www.drugbank.ca/drugs/DB00254,3.09
+DB00256,Lymecycline,https://www.drugbank.ca/drugs/DB00256,2.50±0.24
+DB00257,Clotrimazole,https://www.drugbank.ca/drugs/DB00257,4.1
+DB00259,Sulfanilamide,https://www.drugbank.ca/drugs/DB00259,10.6 (at 20 °C)
+DB00263,Sulfisoxazole,https://www.drugbank.ca/drugs/DB00263,5
+DB00264,Metoprolol,https://www.drugbank.ca/drugs/DB00264,9.7
+DB00268,Ropinirole,https://www.drugbank.ca/drugs/DB00268,10.17
+DB00273,Topiramate,https://www.drugbank.ca/drugs/DB00273,8.7
+DB00275,Olmesartan,https://www.drugbank.ca/drugs/DB00275,4.3
+DB00277,Theophylline,https://www.drugbank.ca/drugs/DB00277,8.81
+DB00279,Liothyronine,https://www.drugbank.ca/drugs/DB00279,8.4
+DB00281,Lidocaine,https://www.drugbank.ca/drugs/DB00281,8.01
+DB00286,Conjugated estrogens,https://www.drugbank.ca/drugs/DB00286,10
+DB00289,Atomoxetine,https://www.drugbank.ca/drugs/DB00289,10.13
+DB00291,Chlorambucil,https://www.drugbank.ca/drugs/DB00291,5.75
+DB00294,Etonogestrel,https://www.drugbank.ca/drugs/DB00294,10.4
+DB00295,Morphine,https://www.drugbank.ca/drugs/DB00295,8.21 (at 25 °C)
+DB00296,Ropivacaine,https://www.drugbank.ca/drugs/DB00296,8.07
+DB00297,Bupivacaine,https://www.drugbank.ca/drugs/DB00297,8.1
+DB00300,Tenofovir disoproxil,https://www.drugbank.ca/drugs/DB00300,3.75
+DB00304,Desogestrel,https://www.drugbank.ca/drugs/DB00304,13.04
+DB00305,Mitomycin,https://www.drugbank.ca/drugs/DB00305,10.9
+DB00306,Talbutal,https://www.drugbank.ca/drugs/DB00306,7.79 (at 25 °C)
+DB00312,Pentobarbital,https://www.drugbank.ca/drugs/DB00312,8.11 (at 25 °C)
+DB00313,Valproic acid,https://www.drugbank.ca/drugs/DB00313,4.8
+DB00315,Zolmitriptan,https://www.drugbank.ca/drugs/DB00315,9.64
+DB00316,Acetaminophen,https://www.drugbank.ca/drugs/DB00316,-4.4 (strongest basic)
+DB00317,Gefitinib,https://www.drugbank.ca/drugs/DB00317,5.4 and 7.2
+DB00318,Codeine,https://www.drugbank.ca/drugs/DB00318,8.2
+DB00321,Amitriptyline,https://www.drugbank.ca/drugs/DB00321,9.4
+DB00322,Floxuridine,https://www.drugbank.ca/drugs/DB00322,7.44
+DB00327,Hydromorphone,https://www.drugbank.ca/drugs/DB00327,8.2
+DB00328,Indomethacin,https://www.drugbank.ca/drugs/DB00328,4.5
+DB00331,Metformin,https://www.drugbank.ca/drugs/DB00331,12.4
+DB00333,Methadone,https://www.drugbank.ca/drugs/DB00333,9.2
+DB00334,Olanzapine,https://www.drugbank.ca/drugs/DB00334,10.57
+DB00335,Atenolol,https://www.drugbank.ca/drugs/DB00335,9.6
+DB00336,Nitrofural,https://www.drugbank.ca/drugs/DB00336,10
+DB00338,Omeprazole,https://www.drugbank.ca/drugs/DB00338,"9.29 (acid), 4.77 (base)"
+DB00339,Pyrazinamide,https://www.drugbank.ca/drugs/DB00339,-0.5
+DB00341,Cetirizine,https://www.drugbank.ca/drugs/DB00341,"1.52, 2.92 and 8.27"
+DB00345,Aminohippuric acid,https://www.drugbank.ca/drugs/DB00345,3.83
+DB00346,Alfuzosin,https://www.drugbank.ca/drugs/DB00346,8.13
+DB00350,Minoxidil,https://www.drugbank.ca/drugs/DB00350,4.61
+DB00358,Mefloquine,https://www.drugbank.ca/drugs/DB00358,8.6
+DB00359,Sulfadiazine,https://www.drugbank.ca/drugs/DB00359,6.36
+DB00363,Clozapine,https://www.drugbank.ca/drugs/DB00363,7.5
+DB00364,Sucralfate,https://www.drugbank.ca/drugs/DB00364,0.43 to 1.19
+DB00367,Levonorgestrel,https://www.drugbank.ca/drugs/DB00367,"17.91,-1.5"
+DB00368,Norepinephrine,https://www.drugbank.ca/drugs/DB00368,8.58
+DB00370,Mirtazapine,https://www.drugbank.ca/drugs/DB00370,7.7
+DB00373,Timolol,https://www.drugbank.ca/drugs/DB00373,9.2
+DB00376,Trihexyphenidyl,https://www.drugbank.ca/drugs/DB00376,8.7
+DB00379,Mexiletine,https://www.drugbank.ca/drugs/DB00379,9.2
+DB00380,Dexrazoxane,https://www.drugbank.ca/drugs/DB00380,2.1
+DB00382,Tacrine,https://www.drugbank.ca/drugs/DB00382,9.95 (at 20 °C)
+DB00388,Phenylephrine,https://www.drugbank.ca/drugs/DB00388,8.97
+DB00390,Digoxin,https://www.drugbank.ca/drugs/DB00390,"-3, 7.15"
+DB00391,Sulpiride,https://www.drugbank.ca/drugs/DB00391,9.12
+DB00395,Carisoprodol,https://www.drugbank.ca/drugs/DB00395,15.06 (Strongest acidic)
+DB00396,Progesterone,https://www.drugbank.ca/drugs/DB00396,"Strongest acidic: , Strongest basic: 18.92, -4.8"
+DB00397,Phenylpropanolamine,https://www.drugbank.ca/drugs/DB00397,9.44 (at 20 °C)
+DB00402,Eszopiclone,https://www.drugbank.ca/drugs/DB00402,9.2
+DB00413,Pramipexole,https://www.drugbank.ca/drugs/DB00413,"5.6, 9.5"
+DB00417,Phenoxymethylpenicillin,https://www.drugbank.ca/drugs/DB00417,2.79
+DB00418,Secobarbital,https://www.drugbank.ca/drugs/DB00418,7.8
+DB00420,Promazine,https://www.drugbank.ca/drugs/DB00420,9.36
+DB00424,Hyoscyamine,https://www.drugbank.ca/drugs/DB00424,11.7
+DB00425,Zolpidem,https://www.drugbank.ca/drugs/DB00425,"Strongest basic, 5.65"
+DB00432,Trifluridine,https://www.drugbank.ca/drugs/DB00432,7.95
+DB00433,Prochlorperazine,https://www.drugbank.ca/drugs/DB00433,8.1
+DB00436,Bendroflumethiazide,https://www.drugbank.ca/drugs/DB00436,8.5
+DB00437,Allopurinol,https://www.drugbank.ca/drugs/DB00437,10.2 (at 25?)
+DB00440,Trimethoprim,https://www.drugbank.ca/drugs/DB00440,7.12 (at 20 °C)
+DB00441,Gemcitabine,https://www.drugbank.ca/drugs/DB00441,3.6
+DB00450,Droperidol,https://www.drugbank.ca/drugs/DB00450,7.46
+DB00454,Meperidine,https://www.drugbank.ca/drugs/DB00454,8.59
+DB00457,Prazosin,https://www.drugbank.ca/drugs/DB00457,6.54
+DB00458,Imipramine,https://www.drugbank.ca/drugs/DB00458,9.4
+DB00463,Metharbital,https://www.drugbank.ca/drugs/DB00463,8.01 (at 25 °C)
+DB00470,Dronabinol,https://www.drugbank.ca/drugs/DB00470,10.6
+DB00475,Chlordiazepoxide,https://www.drugbank.ca/drugs/DB00475,4.8
+DB00477,Chlorpromazine,https://www.drugbank.ca/drugs/DB00477,9.3 (at 25 °C)
+DB00479,Amikacin,https://www.drugbank.ca/drugs/DB00479,8.1
+DB00482,Celecoxib,https://www.drugbank.ca/drugs/DB00482,11.1
+DB00484,Brimonidine,https://www.drugbank.ca/drugs/DB00484,7.78
+DB00491,Miglitol,https://www.drugbank.ca/drugs/DB00491,5.9
+DB00500,Tolmetin,https://www.drugbank.ca/drugs/DB00500,3.5
+DB00501,Cimetidine,https://www.drugbank.ca/drugs/DB00501,6.8
+DB00502,Haloperidol,https://www.drugbank.ca/drugs/DB00502,8.66
+DB00513,Aminocaproic acid,https://www.drugbank.ca/drugs/DB00513,4.43 (at 25 °C)
+DB00527,Cinchocaine,https://www.drugbank.ca/drugs/DB00527,8.85
+DB00532,Mephenytoin,https://www.drugbank.ca/drugs/DB00532,8.51
+DB00535,Cefdinir,https://www.drugbank.ca/drugs/DB00535,9.7
+DB00536,Guanidine,https://www.drugbank.ca/drugs/DB00536,12.5
+DB00537,Ciprofloxacin,https://www.drugbank.ca/drugs/DB00537,6.09
+DB00540,Nortriptyline,https://www.drugbank.ca/drugs/DB00540,9.7
+DB00541,Vincristine,https://www.drugbank.ca/drugs/DB00541,5
+DB00544,Fluorouracil,https://www.drugbank.ca/drugs/DB00544,8.02
+DB00548,Azelaic acid,https://www.drugbank.ca/drugs/DB00548,4.55 (at 25 °C)
+DB00551,Acetohydroxamic acid,https://www.drugbank.ca/drugs/DB00551,8.7 (at 25 °C)
+DB00552,Pentostatin,https://www.drugbank.ca/drugs/DB00552,5.2
+DB00554,Piroxicam,https://www.drugbank.ca/drugs/DB00554,6.3
+DB00555,Lamotrigine,https://www.drugbank.ca/drugs/DB00555,5.7
+DB00562,Benzthiazide,https://www.drugbank.ca/drugs/DB00562,6
+DB00563,Methotrexate,https://www.drugbank.ca/drugs/DB00563,4.7
+DB00564,Carbamazepine,https://www.drugbank.ca/drugs/DB00564,"15.96, -3.8"
+DB00571,Propranolol,https://www.drugbank.ca/drugs/DB00571,9.42
+DB00572,Atropine,https://www.drugbank.ca/drugs/DB00572,9.43
+DB00573,Fenoprofen,https://www.drugbank.ca/drugs/DB00573,4.5
+DB00574,Fenfluramine,https://www.drugbank.ca/drugs/DB00574,9.92
+DB00575,Clonidine,https://www.drugbank.ca/drugs/DB00575,8.05 (at 25 °C)
+DB00577,Valaciclovir,https://www.drugbank.ca/drugs/DB00577,"1.90, 7.47, and 9.43"
+DB00583,Levocarnitine,https://www.drugbank.ca/drugs/DB00583,3.8
+DB00586,Diclofenac,https://www.drugbank.ca/drugs/DB00586,4.15
+DB00590,Doxazosin,https://www.drugbank.ca/drugs/DB00590,6.52
+DB00591,Fluocinolone acetonide,https://www.drugbank.ca/drugs/DB00591,13.9
+DB00592,Piperazine,https://www.drugbank.ca/drugs/DB00592,9.73
+DB00594,Amiloride,https://www.drugbank.ca/drugs/DB00594,8.7
+DB00595,Oxytetracycline,https://www.drugbank.ca/drugs/DB00595,3.27 (at 25 °C)
+DB00598,Labetalol,https://www.drugbank.ca/drugs/DB00598,9.3
+DB00599,Thiopental,https://www.drugbank.ca/drugs/DB00599,7.55
+DB00601,Linezolid,https://www.drugbank.ca/drugs/DB00601,1.8
+DB00605,Sulindac,https://www.drugbank.ca/drugs/DB00605,4.7
+DB00608,Chloroquine,https://www.drugbank.ca/drugs/DB00608,10.1
+DB00610,Metaraminol,https://www.drugbank.ca/drugs/DB00610,8.79
+DB00612,Bisoprolol,https://www.drugbank.ca/drugs/DB00612,9.5
+DB00623,Fluphenazine,https://www.drugbank.ca/drugs/DB00623,7.9
+DB00627,Niacin,https://www.drugbank.ca/drugs/DB00627,4.75 (at 25 °C)
+DB00630,Alendronic acid,https://www.drugbank.ca/drugs/DB00630,2.72 (at 25 °C)
+DB00633,Dexmedetomidine,https://www.drugbank.ca/drugs/DB00633,7.1
+DB00652,Pentazocine,https://www.drugbank.ca/drugs/DB00652,8.88
+DB00654,Latanoprost,https://www.drugbank.ca/drugs/DB00654,4.88
+DB00656,Trazodone,https://www.drugbank.ca/drugs/DB00656,6.74
+DB00659,Acamprosate,https://www.drugbank.ca/drugs/DB00659,-1.1
+DB00662,Trimethobenzamide,https://www.drugbank.ca/drugs/DB00662,8.78
+DB00668,Epinephrine,https://www.drugbank.ca/drugs/DB00668,8.59 (at 25 °C)
+DB00669,Sumatriptan,https://www.drugbank.ca/drugs/DB00669,4.9
+DB00672,Chlorpropamide,https://www.drugbank.ca/drugs/DB00672,5.13
+DB00678,Losartan,https://www.drugbank.ca/drugs/DB00678,5.5
+DB00679,Thioridazine,https://www.drugbank.ca/drugs/DB00679,9.5
+DB00682,Warfarin,https://www.drugbank.ca/drugs/DB00682,5.0
+DB00688,Mycophenolate mofetil,https://www.drugbank.ca/drugs/DB00688,5.6 for the morpholino group and 8.5 for the phenolic group
+DB00694,Daunorubicin,https://www.drugbank.ca/drugs/DB00694,7.85
+DB00697,Tizanidine,https://www.drugbank.ca/drugs/DB00697,7.48
+DB00698,Nitrofurantoin,https://www.drugbank.ca/drugs/DB00698,7.2
+DB00703,Methazolamide,https://www.drugbank.ca/drugs/DB00703,7.30
+DB00713,Oxacillin,https://www.drugbank.ca/drugs/DB00713,2.72
+DB00715,Paroxetine,https://www.drugbank.ca/drugs/DB00715,9.90
+DB00721,Procaine,https://www.drugbank.ca/drugs/DB00721,8.05 (at 15 °C)
+DB00722,Lisinopril,https://www.drugbank.ca/drugs/DB00722,2.5 (at 25 °C)
+DB00727,Nitroglycerin,https://www.drugbank.ca/drugs/DB00727,-5.6
+DB00730,Thiabendazole,https://www.drugbank.ca/drugs/DB00730,4.64 (at 25 °C)
+DB00742,Mannitol,https://www.drugbank.ca/drugs/DB00742,13.5 (at 25 °C)
+DB00747,Scopolamine,https://www.drugbank.ca/drugs/DB00747,7.75
+DB00749,Etodolac,https://www.drugbank.ca/drugs/DB00749,4.65
+DB00756,Hexachlorophene,https://www.drugbank.ca/drugs/DB00756,4.95
+DB00759,Tetracycline,https://www.drugbank.ca/drugs/DB00759,3.3 (at 25 °C)
+DB00766,Clavulanic acid,https://www.drugbank.ca/drugs/DB00766,2.7
+DB00770,Alprostadil,https://www.drugbank.ca/drugs/DB00770,4.85 (at 25 °C)
+DB00774,Hydroflumethiazide,https://www.drugbank.ca/drugs/DB00774,8.9
+DB00776,Oxcarbazepine,https://www.drugbank.ca/drugs/DB00776,13.73
+DB00779,Nalidixic acid,https://www.drugbank.ca/drugs/DB00779,8.6
+DB00780,Phenelzine,https://www.drugbank.ca/drugs/DB00780,6.5-8
+DB00781,Polymyxin B,https://www.drugbank.ca/drugs/DB00781,8.9
+DB00783,Estradiol,https://www.drugbank.ca/drugs/DB00783,10.46±0.03
+DB00784,Mefenamic acid,https://www.drugbank.ca/drugs/DB00784,4.2
+DB00787,Acyclovir,https://www.drugbank.ca/drugs/DB00787,2.52 and 9.35
+DB00788,Naproxen,https://www.drugbank.ca/drugs/DB00788,4.15
+DB00797,Tolazoline,https://www.drugbank.ca/drugs/DB00797,10.3
+DB00807,Proparacaine,https://www.drugbank.ca/drugs/DB00807,3.2
+DB00808,Indapamide,https://www.drugbank.ca/drugs/DB00808,8.8
+DB00812,Phenylbutazone,https://www.drugbank.ca/drugs/DB00812,4.5
+DB00813,Fentanyl,https://www.drugbank.ca/drugs/DB00813,8.99
+DB00814,Meloxicam,https://www.drugbank.ca/drugs/DB00814,4.08
+DB00818,Propofol,https://www.drugbank.ca/drugs/DB00818,11.1 (at 20 °C)
+DB00819,Acetazolamide,https://www.drugbank.ca/drugs/DB00819,7.2
+DB00829,Diazepam,https://www.drugbank.ca/drugs/DB00829,3.4
+DB00843,Donepezil,https://www.drugbank.ca/drugs/DB00843,8.9
+DB00844,Nalbuphine,https://www.drugbank.ca/drugs/DB00844,8.71 and 9.96 (hcl form)
+DB00845,Clofazimine,https://www.drugbank.ca/drugs/DB00845,8.51
+DB00847,Cysteamine,https://www.drugbank.ca/drugs/DB00847,10.4
+DB00849,Methylphenobarbital,https://www.drugbank.ca/drugs/DB00849,7.8
+DB00850,Perphenazine,https://www.drugbank.ca/drugs/DB00850,7.94
+DB00852,Pseudoephedrine,https://www.drugbank.ca/drugs/DB00852,10.3 (at 0 °C)
+DB00854,Levorphanol,https://www.drugbank.ca/drugs/DB00854,9.58
+DB00857,Terbinafine,https://www.drugbank.ca/drugs/DB00857,7.10
+DB00859,Penicillamine,https://www.drugbank.ca/drugs/DB00859,1.8
+DB00863,Ranitidine,https://www.drugbank.ca/drugs/DB00863,8.2 and 2.7
+DB00870,Suprofen,https://www.drugbank.ca/drugs/DB00870,3.91
+DB00878,Chlorhexidine,https://www.drugbank.ca/drugs/DB00878,10.8 (at 25 °C)
+DB00879,Emtricitabine,https://www.drugbank.ca/drugs/DB00879,2.65
+DB00880,Chlorothiazide,https://www.drugbank.ca/drugs/DB00880,6.85
+DB00881,Quinapril,https://www.drugbank.ca/drugs/DB00881,2.8
+DB00888,Mechlorethamine,https://www.drugbank.ca/drugs/DB00888,6.43 (at 25°C)
+DB00891,Sulfapyridine,https://www.drugbank.ca/drugs/DB00891,8.43
+DB00898,Ethanol,https://www.drugbank.ca/drugs/DB00898,15.9 (at 25 °C)
+DB00903,Etacrynic acid,https://www.drugbank.ca/drugs/DB00903,3.5
+DB00905,Bimatoprost,https://www.drugbank.ca/drugs/DB00905,"14.3, - 0.23"
+DB00907,Cocaine,https://www.drugbank.ca/drugs/DB00907,8.61 (at 15 °C)
+DB00908,Quinidine,https://www.drugbank.ca/drugs/DB00908,8.56 (at 25 °C)
+DB00909,Zonisamide,https://www.drugbank.ca/drugs/DB00909,10.2
+DB00916,Metronidazole,https://www.drugbank.ca/drugs/DB00916,"2.57,15.42"
+DB00919,Spectinomycin,https://www.drugbank.ca/drugs/DB00919,6.95
+DB00920,Ketotifen,https://www.drugbank.ca/drugs/DB00920,8.43 ± 0.11
+DB00921,Buprenorphine,https://www.drugbank.ca/drugs/DB00921,8.31 (at 25 °C)
+DB00924,Cyclobenzaprine,https://www.drugbank.ca/drugs/DB00924,8.47
+DB00936,Salicylic acid,https://www.drugbank.ca/drugs/DB00936,2.97
+DB00951,Isoniazid,https://www.drugbank.ca/drugs/DB00951,1.82 (at 20 °C)
+DB00960,Pindolol,https://www.drugbank.ca/drugs/DB00960,9.25
+DB00961,Mepivacaine,https://www.drugbank.ca/drugs/DB00961,7.7
+DB00981,Physostigmine,https://www.drugbank.ca/drugs/DB00981,6.12
+DB00982,Isotretinoin,https://www.drugbank.ca/drugs/DB00982,~4
+DB00988,Dopamine,https://www.drugbank.ca/drugs/DB00988,8.93
+DB00991,Oxaprozin,https://www.drugbank.ca/drugs/DB00991,4.3
+DB00993,Azathioprine,https://www.drugbank.ca/drugs/DB00993,7.87 (at 25 °C)
+DB00996,Gabapentin,https://www.drugbank.ca/drugs/DB00996,3.7
+DB00999,Hydrochlorothiazide,https://www.drugbank.ca/drugs/DB00999,7.9
+DB01001,Salbutamol,https://www.drugbank.ca/drugs/DB01001,10.3
+DB01002,Levobupivacaine,https://www.drugbank.ca/drugs/DB01002,8.1
+DB01003,Cromoglicic acid,https://www.drugbank.ca/drugs/DB01003,1.1
+DB01009,Ketoprofen,https://www.drugbank.ca/drugs/DB01009,4.45
+DB01021,Trichlormethiazide,https://www.drugbank.ca/drugs/DB01021,8.6
+DB01032,Probenecid,https://www.drugbank.ca/drugs/DB01032,3.4
+DB01035,Procainamide,https://www.drugbank.ca/drugs/DB01035,9.32
+DB01043,Memantine,https://www.drugbank.ca/drugs/DB01043,10.27
+DB01045,Rifampicin,https://www.drugbank.ca/drugs/DB01045,1.7
+DB01050,Ibuprofen,https://www.drugbank.ca/drugs/DB01050,5.3
+DB01051,Novobiocin,https://www.drugbank.ca/drugs/DB01051,4.3
+DB01053,Benzylpenicillin,https://www.drugbank.ca/drugs/DB01053,2.74 (at 25 °C)
+DB01062,Oxybutynin,https://www.drugbank.ca/drugs/DB01062,8.04
+DB01067,Glipizide,https://www.drugbank.ca/drugs/DB01067,5.9
+DB01069,Promethazine,https://www.drugbank.ca/drugs/DB01069,9.1
+DB01075,Diphenhydramine,https://www.drugbank.ca/drugs/DB01075,8.98
+DB01076,Atorvastatin,https://www.drugbank.ca/drugs/DB01076,4.46
+DB01080,Vigabatrin,https://www.drugbank.ca/drugs/DB01080,4 and 9.7
+DB01083,Orlistat,https://www.drugbank.ca/drugs/DB01083,15
+DB01085,Pilocarpine,https://www.drugbank.ca/drugs/DB01085,6.78
+DB01086,Benzocaine,https://www.drugbank.ca/drugs/DB01086,2.51 (at 25 °C)
+DB01099,Flucytosine,https://www.drugbank.ca/drugs/DB01099,3.26
+DB01100,Pimozide,https://www.drugbank.ca/drugs/DB01100,8.63
+DB01103,Quinacrine,https://www.drugbank.ca/drugs/DB01103,10.3
+DB01104,Sertraline,https://www.drugbank.ca/drugs/DB01104,9.16
+DB01114,Chlorpheniramine,https://www.drugbank.ca/drugs/DB01114,9.13 (at 25 °C)
+DB01118,Amiodarone,https://www.drugbank.ca/drugs/DB01118,6.56  ± 0.06
+DB01119,Diazoxide,https://www.drugbank.ca/drugs/DB01119,8.74
+DB01123,Proflavine,https://www.drugbank.ca/drugs/DB01123,8.06 (at 20 °C)
+DB01124,Tolbutamide,https://www.drugbank.ca/drugs/DB01124,5.16
+DB01128,Bicalutamide,https://www.drugbank.ca/drugs/DB01128,12.0
+DB01132,Pioglitazone,https://www.drugbank.ca/drugs/DB01132,5.19
+DB01137,Levofloxacin,https://www.drugbank.ca/drugs/DB01137,6.25
+DB01138,Sulfinpyrazone,https://www.drugbank.ca/drugs/DB01138,3.25
+DB01139,Cefapirin,https://www.drugbank.ca/drugs/DB01139,2.15
+DB01142,Doxepin,https://www.drugbank.ca/drugs/DB01142,8.96
+DB01147,Cloxacillin,https://www.drugbank.ca/drugs/DB01147,2.78
+DB01148,Flavoxate,https://www.drugbank.ca/drugs/DB01148,7.3
+DB01151,Desipramine,https://www.drugbank.ca/drugs/DB01151,10.4
+DB01154,Thiamylal,https://www.drugbank.ca/drugs/DB01154,7.48
+DB01157,Trimetrexate,https://www.drugbank.ca/drugs/DB01157,8.0
+DB01167,Itraconazole,https://www.drugbank.ca/drugs/DB01167,3.70
+DB01171,Moclobemide,https://www.drugbank.ca/drugs/DB01171,10.6 (ethanol-air)
+DB01173,Orphenadrine,https://www.drugbank.ca/drugs/DB01173,8.91
+DB01174,Phenobarbital,https://www.drugbank.ca/drugs/DB01174,7.3
+DB01175,Escitalopram,https://www.drugbank.ca/drugs/DB01175,9.5
+DB01184,Domperidone,https://www.drugbank.ca/drugs/DB01184,7.9
+DB01190,Clindamycin,https://www.drugbank.ca/drugs/DB01190,7.6
+DB01192,Oxymorphone,https://www.drugbank.ca/drugs/DB01192,8.17
+DB01195,Flecainide,https://www.drugbank.ca/drugs/DB01195,9.3
+DB01203,Nadolol,https://www.drugbank.ca/drugs/DB01203,9.67
+DB01211,Clarithromycin,https://www.drugbank.ca/drugs/DB01211,8.99 (at 25 °C)
+DB01217,Anastrozole,https://www.drugbank.ca/drugs/DB01217,1.4
+DB01221,Ketamine,https://www.drugbank.ca/drugs/DB01221,7.5
+DB01224,Quetiapine,https://www.drugbank.ca/drugs/DB01224,7.06
+DB01225,Enoxaparin,https://www.drugbank.ca/drugs/DB01225,-2.8
+DB01233,Metoclopramide,https://www.drugbank.ca/drugs/DB01233,9.27
+DB01238,Aripiprazole,https://www.drugbank.ca/drugs/DB01238,7.6
+DB01246,Alimemazine,https://www.drugbank.ca/drugs/DB01246,9.05
+DB01247,Isocarboxazid,https://www.drugbank.ca/drugs/DB01247,10.4
+DB01253,Ergometrine,https://www.drugbank.ca/drugs/DB01253,6.8
+DB01255,Lisdexamfetamine,https://www.drugbank.ca/drugs/DB01255,10.5
+DB01264,Darunavir,https://www.drugbank.ca/drugs/DB01264,11.43±0.46(Predicted)
+DB01268,Sunitinib,https://www.drugbank.ca/drugs/DB01268,8.95
+DB01275,Hydralazine,https://www.drugbank.ca/drugs/DB01275,7.3
+DB01351,Amobarbital,https://www.drugbank.ca/drugs/DB01351,7.84
+DB01352,Aprobarbital,https://www.drugbank.ca/drugs/DB01352,7.99 (at 25 °C)
+DB01353,Butobarbital,https://www.drugbank.ca/drugs/DB01353,7.86
+DB01355,Hexobarbital,https://www.drugbank.ca/drugs/DB01355,8.2
+DB01364,Ephedrine,https://www.drugbank.ca/drugs/DB01364,10.3 (at 0 °C)
+DB01390,Sodium bicarbonate,https://www.drugbank.ca/drugs/DB01390,6.3
+DB01394,Colchicine,https://www.drugbank.ca/drugs/DB01394,12.36
+DB01395,Drospirenone,https://www.drugbank.ca/drugs/DB01395,-5
+DB01403,Methotrimeprazine,https://www.drugbank.ca/drugs/DB01403,9.19
+DB01412,Theobromine,https://www.drugbank.ca/drugs/DB01412,9.9
+DB01424,Aminophenazone,https://www.drugbank.ca/drugs/DB01424,5
+DB01435,Antipyrine,https://www.drugbank.ca/drugs/DB01435,1.4
+DB01437,Glutethimide,https://www.drugbank.ca/drugs/DB01437,9.2
+DB01438,Phenazopyridine,https://www.drugbank.ca/drugs/DB01438,5.05
+DB01452,Diamorphine,https://www.drugbank.ca/drugs/DB01452,7.95 (at 25 °C)
+DB01464,Furethidine,https://www.drugbank.ca/drugs/DB01464,7.48
+DB01483,Barbital,https://www.drugbank.ca/drugs/DB01483,8.14 (at 15 °C)
+DB01488,Dimethyltryptamine,https://www.drugbank.ca/drugs/DB01488,8.68
+DB01509,Tenamfetamine,https://www.drugbank.ca/drugs/DB01509,9.67 (at 25 °C)
+DB01577,Metamfetamine,https://www.drugbank.ca/drugs/DB01577,9.87 (at 25 °C)
+DB01582,Sulfamethazine,https://www.drugbank.ca/drugs/DB01582,7.59
+DB01598,Imipenem,https://www.drugbank.ca/drugs/DB01598,3.2
+DB01603,Meticillin,https://www.drugbank.ca/drugs/DB01603,2.77
+DB01606,Tazobactam,https://www.drugbank.ca/drugs/DB01606,2.1
+DB01611,Hydroxychloroquine,https://www.drugbank.ca/drugs/DB01611,9.67
+DB01638,Sorbitol,https://www.drugbank.ca/drugs/DB01638,13.6
+DB01656,Roflumilast,https://www.drugbank.ca/drugs/DB01656,8.74
+DB01672,"2,3-Dihydroxy-Benzoic Acid",https://www.drugbank.ca/drugs/DB01672,2.91 (at 25 °C)
+DB01677,Fumaric acid,https://www.drugbank.ca/drugs/DB01677,3.03 (at 18 °C)
+DB01681,Benzene Hexacarboxylic Acid,https://www.drugbank.ca/drugs/DB01681,0.8 (at 25 °C)
+DB01688,P-Cresol,https://www.drugbank.ca/drugs/DB01688,10.3 (at 25 °C)
+DB01702,"2-(3,4-Dihydroxyphenyl)Acetic Acid",https://www.drugbank.ca/drugs/DB01702,4.25 (at 30 °C)
+DB01726,2-Aminophenol,https://www.drugbank.ca/drugs/DB01726,4.84 (at 20 °C)
+DB01750,1-naphthaleneacetic acid,https://www.drugbank.ca/drugs/DB01750,4.23 (at 25 °C)
+DB01762,Acetoacetic acid,https://www.drugbank.ca/drugs/DB01762,3.59 (at 0 °C)
+DB01776,M-Cresol,https://www.drugbank.ca/drugs/DB01776,10.1 (at 25 °C)
+DB01796,Quinolinic Acid,https://www.drugbank.ca/drugs/DB01796,2.43
+DB01828,Methylamine,https://www.drugbank.ca/drugs/DB01828,10.6
+DB01839,Propylene glycol,https://www.drugbank.ca/drugs/DB01839,14.9
+DB01856,Pimelic Acid,https://www.drugbank.ca/drugs/DB01856,4.51 (at 25 °C)
+DB01880,"3,4-Dihydroxycinnamic Acid",https://www.drugbank.ca/drugs/DB01880,4.62 (at 25 °C)
+DB01917,Putrescine,https://www.drugbank.ca/drugs/DB01917,10.8 (at 20 °C)
+DB01942,Formic acid,https://www.drugbank.ca/drugs/DB01942,3.75 (at 25 °C)
+DB01955,"1,4-Butanediol",https://www.drugbank.ca/drugs/DB01955,14.5 (at 25 °C)
+DB01956,Taurine,https://www.drugbank.ca/drugs/DB01956,1.5
+DB01957,3-Chlorophenol,https://www.drugbank.ca/drugs/DB01957,9.12
+DB01996,3-Methylpyridine,https://www.drugbank.ca/drugs/DB01996,5.63 (at 25 °C)
+DB02024,3-phenylpropionic acid,https://www.drugbank.ca/drugs/DB02024,4.66 (at 18 °C)
+DB02045,Amylamine,https://www.drugbank.ca/drugs/DB02045,10.6 (at 25 °C)
+DB02060,Cyclohexanone,https://www.drugbank.ca/drugs/DB02060,11.3
+DB02074,Butenoic Acid,https://www.drugbank.ca/drugs/DB02074,4.17 (at 18 °C)
+DB02083,"N,N-dimethylglycine",https://www.drugbank.ca/drugs/DB02083,2.04
+DB02085,1-Aminocyclopropanecarboxylic Acid,https://www.drugbank.ca/drugs/DB02085,2.73
+DB02130,Vanillic acid,https://www.drugbank.ca/drugs/DB02130,4.51 (at 25 °C)
+DB02134,Xanthine,https://www.drugbank.ca/drugs/DB02134,7.53
+DB02145,Butyl alcohol,https://www.drugbank.ca/drugs/DB02145,16.1 (at 25 °C)
+DB02163,"2,5-Xylidine",https://www.drugbank.ca/drugs/DB02163,4.53 (at 25 °C)
+DB02175,Malonic acid,https://www.drugbank.ca/drugs/DB02175,2.85 (at 25 °C)
+DB02198,2-Bromoacetyl Group,https://www.drugbank.ca/drugs/DB02198,2.89 (at 20 °C)
+DB02201,Malonate Ion,https://www.drugbank.ca/drugs/DB02201,2.85 (at 25 °C)
+DB02202,"(S)-butane-1,3-diol",https://www.drugbank.ca/drugs/DB02202,15.1 (at 25 °C)
+DB02232,"1,2-Dihydroxybenzene",https://www.drugbank.ca/drugs/DB02232,9.45 (at 25 °C)
+DB02239,Laevulinic Acid,https://www.drugbank.ca/drugs/DB02239,4.64 (at 18 °C)
+DB02249,2-Ethoxyethanol,https://www.drugbank.ca/drugs/DB02249,14.8
+DB02325,Isopropyl alcohol,https://www.drugbank.ca/drugs/DB02325,17.1
+DB02362,Aminobenzoic acid,https://www.drugbank.ca/drugs/DB02362,2.38 (at 25 °C)
+DB02365,"1,10-Phenanthroline",https://www.drugbank.ca/drugs/DB02365,4.27 (at 20 °C)
+DB02379,Beta-D-Glucose,https://www.drugbank.ca/drugs/DB02379,12.9 (at 0 °C)
+DB02403,2-Fluoroaniline,https://www.drugbank.ca/drugs/DB02403,3.2 (at 25 °C)
+DB02406,N-Valeric Acid,https://www.drugbank.ca/drugs/DB02406,4.84 (at 25 °C)
+DB02417,"2,4,6-Tribromophenol",https://www.drugbank.ca/drugs/DB02417,6.8 (at 25 °C)
+DB02464,Benzylamine,https://www.drugbank.ca/drugs/DB02464,9.33 (at 25 °C)
+DB02513,Thymol,https://www.drugbank.ca/drugs/DB02513,10.6 (at 20 °C)
+DB02531,Isobutyric acid,https://www.drugbank.ca/drugs/DB02531,4.84 (at 20 °C)
+DB02546,Vorinostat,https://www.drugbank.ca/drugs/DB02546,9.2
+DB02576,F-Loop of Vitamin B12,https://www.drugbank.ca/drugs/DB02576,9.94 (at 10 °C)
+DB02579,Acrylic Acid,https://www.drugbank.ca/drugs/DB02579,4.26 (at 25 °C)
+DB02606,2-Butanol,https://www.drugbank.ca/drugs/DB02606,17.6 (at 25 °C)
+DB02659,Cholic Acid,https://www.drugbank.ca/drugs/DB02659,4.98 (at 20 °C)
+DB02671,1-Methylimidazole,https://www.drugbank.ca/drugs/DB02671,6.95 (at 25 °C)
+DB02679,Cyanamide,https://www.drugbank.ca/drugs/DB02679,1.03 (at 25 °C)
+DB02701,Nicotinamide,https://www.drugbank.ca/drugs/DB02701,3.35 (at 20 °C)
+DB02703,Fusidic acid,https://www.drugbank.ca/drugs/DB02703,5.35
+DB02736,Acetamide,https://www.drugbank.ca/drugs/DB02736,0.63
+DB02746,Phthalic Acid,https://www.drugbank.ca/drugs/DB02746,2.76 (at 25 °C)
+DB02749,Pyromellitic Acid,https://www.drugbank.ca/drugs/DB02749,1.87 (at 25 °C)
+DB02757,Pyrazole,https://www.drugbank.ca/drugs/DB02757,2.48 (at 25 °C)
+DB02772,Sucrose,https://www.drugbank.ca/drugs/DB02772,12.6
+DB02795,P-Anisic Acid,https://www.drugbank.ca/drugs/DB02795,4.47 (at 25 °C)
+DB02806,2-Methoxyethanol,https://www.drugbank.ca/drugs/DB02806,14.8 (at 25 °C)
+DB02839,"2,4-Dihydroxybenzoic Acid",https://www.drugbank.ca/drugs/DB02839,3.11 (at 25 °C)
+DB02843,alpha-D-glucose-1-phosphate,https://www.drugbank.ca/drugs/DB02843,1.11
+DB02962,Benzimidazole,https://www.drugbank.ca/drugs/DB02962,5.3 (at 25 °C)
+DB03017,Lauric acid,https://www.drugbank.ca/drugs/DB03017,5.3 (at 20 °C)
+DB03066,D-Lactic acid,https://www.drugbank.ca/drugs/DB03066,3.83
+DB03085,Glycolic acid,https://www.drugbank.ca/drugs/DB03085,3.83
+DB03107,beta-Alanine,https://www.drugbank.ca/drugs/DB03107,3.63 (at 5 °C)
+DB03166,Acetic acid,https://www.drugbank.ca/drugs/DB03166,4.76 (at 25 °C)
+DB03175,Propyl alcohol,https://www.drugbank.ca/drugs/DB03175,16.1
+DB03255,Phenol,https://www.drugbank.ca/drugs/DB03255,9.99 (at 25 °C)
+DB03345,Mercaptoethanol,https://www.drugbank.ca/drugs/DB03345,9.72 (at 25 °C)
+DB03357,(S)-Mandelic acid,https://www.drugbank.ca/drugs/DB03357,3.41 (at 25 °C)
+DB03366,Imidazole,https://www.drugbank.ca/drugs/DB03366,6.95 (at 25 °C)
+DB03419,Uracil,https://www.drugbank.ca/drugs/DB03419,9.45
+DB03553,Glutaric Acid,https://www.drugbank.ca/drugs/DB03553,4.34 (at 25 °C)
+DB03560,P-Hydroxybenzaldehyde,https://www.drugbank.ca/drugs/DB03560,7.61 (at 25 °C)
+DB03568,Butyric Acid,https://www.drugbank.ca/drugs/DB03568,4.82 (at 25 °C)
+DB03575,Phencyclidine,https://www.drugbank.ca/drugs/DB03575,8.29
+DB03600,Capric acid,https://www.drugbank.ca/drugs/DB03600,4.9
+DB03615,Ribostamycin,https://www.drugbank.ca/drugs/DB03615,7.7
+DB03659,Butylamine,https://www.drugbank.ca/drugs/DB03659,10.8 (at 20 °C)
+DB03728,p-Chlorobenzoic acid,https://www.drugbank.ca/drugs/DB03728,3.98 (at 25 °C)
+DB03750,Isovaleric Acid,https://www.drugbank.ca/drugs/DB03750,4.77 (at 20 °C)
+DB03765,2'-cytidylic acid,https://www.drugbank.ca/drugs/DB03765,0.8
+DB03766,Propanoic acid,https://www.drugbank.ca/drugs/DB03766,4.88
+DB03793,Benzoic acid,https://www.drugbank.ca/drugs/DB03793,4.19 (at 25 °C)
+DB03843,Formaldehyde,https://www.drugbank.ca/drugs/DB03843,13.3 (at 25 °C)
+DB03904,Urea,https://www.drugbank.ca/drugs/DB03904,0.1 (at 21 °C)
+DB03946,"3,4-Dihydroxybenzoic Acid",https://www.drugbank.ca/drugs/DB03946,4.26 (at 25 °C)
+DB03994,Ethanolamine,https://www.drugbank.ca/drugs/DB03994,9.5
+DB04183,Methylmalonic Acid,https://www.drugbank.ca/drugs/DB04183,3.12 (at 20 °C)
+DB04272,Citric acid,https://www.drugbank.ca/drugs/DB04272,2.79
+DB04299,Maleic acid,https://www.drugbank.ca/drugs/DB04299,1.83
+DB04325,Phenethylamine,https://www.drugbank.ca/drugs/DB04325,9.83 (at 25 °C)
+DB04329,Isoquinoline,https://www.drugbank.ca/drugs/DB04329,5.42 (at 20 °C)
+DB04339,Carbocisteine,https://www.drugbank.ca/drugs/DB04339,1.84
+DB04343,Glyoxylic acid,https://www.drugbank.ca/drugs/DB04343,3.3 (at 25 °C)
+DB04365,Arecoline,https://www.drugbank.ca/drugs/DB04365,7.16
+DB04398,Lactic acid,https://www.drugbank.ca/drugs/DB04398,3.86 (at 20 °C)
+DB04417,P-Nitrophenol,https://www.drugbank.ca/drugs/DB04417,7.15 (at 25 °C)
+DB04519,Caprylic acid,https://www.drugbank.ca/drugs/DB04519,4.89 (at 25 °C)
+DB04528,"2,4-Dinitrophenol",https://www.drugbank.ca/drugs/DB04528,4.09 (at 25 °C)
+DB04539,Glyphosate,https://www.drugbank.ca/drugs/DB04539,0.8
+DB04566,Inosinic Acid,https://www.drugbank.ca/drugs/DB04566,2.4
+DB04581,1-benzylimidazole,https://www.drugbank.ca/drugs/DB04581,6.7
+DB04586,o-Bromophenol,https://www.drugbank.ca/drugs/DB04586,8.45 (at 25 °C)
+DB04620,Cycloleucine,https://www.drugbank.ca/drugs/DB04620,2.62
+DB04626,Apramycin,https://www.drugbank.ca/drugs/DB04626,8.5
+DB04813,Bithionol,https://www.drugbank.ca/drugs/DB04813,4.82
+DB04819,Methapyrilene,https://www.drugbank.ca/drugs/DB04819,8.85 (at 20 °C)
+DB04824,Phenolphthalein,https://www.drugbank.ca/drugs/DB04824,9.7 (at 25 °C)
+DB04829,Lysergic acid diethylamide,https://www.drugbank.ca/drugs/DB04829,7.8
+DB04844,Tetrabenazine,https://www.drugbank.ca/drugs/DB04844,6.51
+DB04861,Nebivolol,https://www.drugbank.ca/drugs/DB04861,8.13
+DB04911,Oritavancin,https://www.drugbank.ca/drugs/DB04911,2.93±0.7
+DB04948,Lofexidine,https://www.drugbank.ca/drugs/DB04948,9.43
+DB04953,Ezogabine,https://www.drugbank.ca/drugs/DB04953,10.8
+DB05015,Belinostat,https://www.drugbank.ca/drugs/DB05015,7.87 and 8.71 by potentiometry
+DB05154,Pretomanid,https://www.drugbank.ca/drugs/DB05154,7.0
+DB05232,Tetrodotoxin,https://www.drugbank.ca/drugs/DB05232,8.76
+DB05316,Pimavanserin,https://www.drugbank.ca/drugs/DB05316,13.52±0.46
+DB05351,Dexlansoprazole,https://www.drugbank.ca/drugs/DB05351,8.87
+DB05676,Apremilast,https://www.drugbank.ca/drugs/DB05676,12.58
+DB05990,Obeticholic acid,https://www.drugbank.ca/drugs/DB05990,4.76±0.10
+DB06147,Sulfathiazole,https://www.drugbank.ca/drugs/DB06147,7.2
+DB06151,Acetylcysteine,https://www.drugbank.ca/drugs/DB06151,9.52 (at 25 °C)
+DB06204,Tapentadol,https://www.drugbank.ca/drugs/DB06204,9.34 - 10.45
+DB06230,Nalmefene,https://www.drugbank.ca/drugs/DB06230,7.6
+DB06288,Amisulpride,https://www.drugbank.ca/drugs/DB06288,9.37
+DB06403,Ambrisentan,https://www.drugbank.ca/drugs/DB06403,4.0
+DB06480,Prucalopride,https://www.drugbank.ca/drugs/DB06480,8.5
+DB06608,Tafenoquine,https://www.drugbank.ca/drugs/DB06608,9.5
+DB06626,Axitinib,https://www.drugbank.ca/drugs/DB06626,4.8
+DB06637,Dalfampridine,https://www.drugbank.ca/drugs/DB06637,11
+DB06691,Mepyramine,https://www.drugbank.ca/drugs/DB06691,8.85 (at 20 °C)
+DB06698,Betahistine,https://www.drugbank.ca/drugs/DB06698,"3.5, 9.7"
+DB06716,Fospropofol,https://www.drugbank.ca/drugs/DB06716,8.2 - 9.0
+DB06728,Aniline,https://www.drugbank.ca/drugs/DB06728,4.6 (at 25 °C;  aniline conjugate acid)
+DB06770,Benzyl alcohol,https://www.drugbank.ca/drugs/DB06770,15.4
+DB06771,Besifloxacin,https://www.drugbank.ca/drugs/DB06771,6.0-7.0
+DB06782,Dimercaprol,https://www.drugbank.ca/drugs/DB06782,8.62 (at 25 °C)
+DB06809,Plerixafor,https://www.drugbank.ca/drugs/DB06809,6.0 - 7.5
+DB08604,Triclosan,https://www.drugbank.ca/drugs/DB08604,7.9
+DB08797,Salicylamide,https://www.drugbank.ca/drugs/DB08797,8.37 (at 20 °C)
+DB08809,Dichloroacetic acid,https://www.drugbank.ca/drugs/DB08809,1.26
+DB08818,Hyaluronic acid,https://www.drugbank.ca/drugs/DB08818,3-4
+DB08819,Tafluprost,https://www.drugbank.ca/drugs/DB08819,5.5-6.7
+DB08820,Ivacaftor,https://www.drugbank.ca/drugs/DB08820,"11.08, 1.5"
+DB08823,Spinosad,https://www.drugbank.ca/drugs/DB08823,8.1
+DB08826,Deferiprone,https://www.drugbank.ca/drugs/DB08826,3.5
+DB08828,Vismodegib,https://www.drugbank.ca/drugs/DB08828,3.8
+DB08830,Dehydroascorbic acid,https://www.drugbank.ca/drugs/DB08830,3.90
+DB08844,Uric acid,https://www.drugbank.ca/drugs/DB08844,5.4
+DB08847,Hydroxyproline,https://www.drugbank.ca/drugs/DB08847,pK1? 1.82 and pK2? 9.65
+DB08864,Rilpivirine,https://www.drugbank.ca/drugs/DB08864,5.6
+DB08868,Fingolimod,https://www.drugbank.ca/drugs/DB08868,8.0
+DB08872,Gabapentin enacarbil,https://www.drugbank.ca/drugs/DB08872,pKa 5.0
+DB08878,Aminopterin,https://www.drugbank.ca/drugs/DB08878,5.5
+DB08881,Vemurafenib,https://www.drugbank.ca/drugs/DB08881,7.1
+DB08884,Gadoxetic acid,https://www.drugbank.ca/drugs/DB08884,6.8-8
+DB08889,Carfilzomib,https://www.drugbank.ca/drugs/DB08889,3.5
+DB08901,Ponatinib,https://www.drugbank.ca/drugs/DB08901,2.77 and 7.8
+DB08905,Formestane,https://www.drugbank.ca/drugs/DB08905,9.31
+DB08907,Canagliflozin,https://www.drugbank.ca/drugs/DB08907,13.34
+DB08912,Dabrafenib,https://www.drugbank.ca/drugs/DB08912,-1.5
+DB08930,Dolutegravir,https://www.drugbank.ca/drugs/DB08930,8.2
+DB08934,Sofosbuvir,https://www.drugbank.ca/drugs/DB08934,9.3
+DB08995,Diosmin,https://www.drugbank.ca/drugs/DB08995,6.10±0.40
+DB09019,Bromhexine,https://www.drugbank.ca/drugs/DB09019,8.69
+DB09026,Aliskiren,https://www.drugbank.ca/drugs/DB09026,9.49
+DB09027,Ledipasvir,https://www.drugbank.ca/drugs/DB09027,"pka1 = 4.0, pka2 = 5.0"
+DB09031,Miltefosine,https://www.drugbank.ca/drugs/DB09031,~2
+DB09053,Ibrutinib,https://www.drugbank.ca/drugs/DB09053,3.74
+DB09063,Ceritinib,https://www.drugbank.ca/drugs/DB09063,9.7 and 4.1
+DB09069,Trimetazidine,https://www.drugbank.ca/drugs/DB09069,pKa1= 4.45 ± 0.02 and pKa2= 9.14 ± 0.02
+DB09073,Palbociclib,https://www.drugbank.ca/drugs/DB09073,7.4 (the secondary piperazine nitrogen) and 3.9 (the pyridine nitrogen)
+DB09075,Edoxaban,https://www.drugbank.ca/drugs/DB09075,6.7
+DB09078,Lenvatinib,https://www.drugbank.ca/drugs/DB09078,5.05
+DB09147,Ferric pyrophosphate,https://www.drugbank.ca/drugs/DB09147,22.2
+DB09205,Moxisylyte,https://www.drugbank.ca/drugs/DB09205,8.71
+DB09209,Pholcodine,https://www.drugbank.ca/drugs/DB09209,9.3
+DB09216,Tolfenamic acid,https://www.drugbank.ca/drugs/DB09216,5.11
+DB09231,Benidipine,https://www.drugbank.ca/drugs/DB09231,7.34
+DB09232,Cilnidipine,https://www.drugbank.ca/drugs/DB09232,11.39
+DB09237,Levamlodipine,https://www.drugbank.ca/drugs/DB09237,8.6
+DB09299,Tenofovir alafenamide,https://www.drugbank.ca/drugs/DB09299,3.96
+DB09301,Chondroitin sulfate,https://www.drugbank.ca/drugs/DB09301,1.5-2
+DB09325,Sodium fluoride,https://www.drugbank.ca/drugs/DB09325,3.17
+DB09333,Iopodic acid,https://www.drugbank.ca/drugs/DB09333,4.8
+DB11098,Potassium bicarbonate,https://www.drugbank.ca/drugs/DB11098,6.37
+DB11127,Selenious acid,https://www.drugbank.ca/drugs/DB11127,2.46
+DB11143,Cresol,https://www.drugbank.ca/drugs/DB11143,o-cresol: 10.287/ m-cresol: 10.09/ p-cresol: 10.26
+DB11145,Oxyquinoline,https://www.drugbank.ca/drugs/DB11145,5.017
+DB11148,Butamben,https://www.drugbank.ca/drugs/DB11148,2.472
+DB11324,Nonivamide,https://www.drugbank.ca/drugs/DB11324,9.77
+DB11363,Alectinib,https://www.drugbank.ca/drugs/DB11363,7.05
+DB11431,Moxidectin,https://www.drugbank.ca/drugs/DB11431,12.8
+DB11582,Thiocolchicoside,https://www.drugbank.ca/drugs/DB11582,12.74
+DB11693,Voclosporin,https://www.drugbank.ca/drugs/DB11693,13.32 ± 0.70
+DB11712,Tezacaftor,https://www.drugbank.ca/drugs/DB11712,"13.99, 0.19"
+DB11753,Rifamycin,https://www.drugbank.ca/drugs/DB11753,1.8
+DB11757,Istradefylline,https://www.drugbank.ca/drugs/DB11757,0.78
+DB11800,Tivozanib,https://www.drugbank.ca/drugs/DB11800,11.74±0.70
+DB11820,Nifurtimox,https://www.drugbank.ca/drugs/DB11820,-1.01±0.40
+DB11823,Esketamine,https://www.drugbank.ca/drugs/DB11823,7.5
+DB11921,Deflazacort,https://www.drugbank.ca/drugs/DB11921,5.52
+DB11978,Glasdegib,https://www.drugbank.ca/drugs/DB11978,6
+DB12235,Estetrol,https://www.drugbank.ca/drugs/DB12235,10.22±0.70
+DB12243,Edaravone,https://www.drugbank.ca/drugs/DB12243,7.0
+DB12371,Siponimod,https://www.drugbank.ca/drugs/DB12371,"2.69 (Acidic), 9.15 (Basic)"
+DB12466,Favipiravir,https://www.drugbank.ca/drugs/DB12466,5.1
+DB12471,Ibrexafungerp,https://www.drugbank.ca/drugs/DB12471,"2.4, 5.5, 9.0"
+DB12532,Oxetacaine,https://www.drugbank.ca/drugs/DB12532,6.25
+DB12543,Samidorphan,https://www.drugbank.ca/drugs/DB12543,"8.3, 10.1"
+DB12612,Ozanimod,https://www.drugbank.ca/drugs/DB12612,14.73±0.10
+DB12808,Trifarotene,https://www.drugbank.ca/drugs/DB12808,5.69 (pKa1)
+DB12825,Lefamulin,https://www.drugbank.ca/drugs/DB12825,9.41
+DB12941,Darolutamide,https://www.drugbank.ca/drugs/DB12941,11.75
+DB13257,Ferrous sulfate anhydrous,https://www.drugbank.ca/drugs/DB13257,-3
+DB13293,Ipecac,https://www.drugbank.ca/drugs/DB13293,6.64-6.77
+DB13345,Dihydroergocristine,https://www.drugbank.ca/drugs/DB13345,6.9
+DB13421,Edoxudine,https://www.drugbank.ca/drugs/DB13421,9.98
+DB13456,Midecamycin,https://www.drugbank.ca/drugs/DB13456,6.9
+DB13747,Trolamine,https://www.drugbank.ca/drugs/DB13747,7.76
+DB13783,Acemetacin,https://www.drugbank.ca/drugs/DB13783,2.6
+DB13925,Dotatate gallium Ga-68,https://www.drugbank.ca/drugs/DB13925,2.6
+DB13967,Patent Blue,https://www.drugbank.ca/drugs/DB13967,7.63
+DB14007,Pentetic acid,https://www.drugbank.ca/drugs/DB14007,pentabasic (1.5-10.6)
+DB14018,Bromotheophylline,https://www.drugbank.ca/drugs/DB14018,5.45
+DB14126,Tenofovir,https://www.drugbank.ca/drugs/DB14126,3.8 and 6.7
+DB14500,Potassium,https://www.drugbank.ca/drugs/DB14500,-7
+DB14569,Tedizolid,https://www.drugbank.ca/drugs/DB14569,"1.8, 6.5"
+DB14840,Ripretinib,https://www.drugbank.ca/drugs/DB14840,12.10
+DB14975,Voxelotor,https://www.drugbank.ca/drugs/DB14975,7.67±0.10
+DB14989,Umbralisib,https://www.drugbank.ca/drugs/DB14989,2.71
+DB15133,Tepotinib,https://www.drugbank.ca/drugs/DB15133,9.5
+DB15569,Sotorasib,https://www.drugbank.ca/drugs/DB15569,"8.06, 4.56"
+DB16627,Melphalan flufenamide,https://www.drugbank.ca/drugs/DB16627,7.13
