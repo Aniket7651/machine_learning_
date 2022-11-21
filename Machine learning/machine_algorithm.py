@@ -65,7 +65,7 @@ class multivariate_descent():
     def GD(self, loss, W, instance, lr):
         theta_w = []
         for j in W:
-            theta_w.append(j-lr*loss/instance)
+            theta_w.append((1/float(instance))*j-lr*loss)
         return theta_w
 
     def gradient_descent(self, X, b, W, Y, lr=0.01):
@@ -253,7 +253,7 @@ class Naive_Bayes():
         unique = Decision_tree(self.y).find_unique(attribute)
         (p_Y, p_N) = ([], [])
         for y, n in zip(yes, no):
-            (p_Y.append(y/yes_count), p_N.append(n/no_count))
+            (p_Y.append(y/yes_count), p_N.append(n/no_count)) # type: ignore
         return {k:v for k, v in zip(unique, p_Y)}, {k:v for k, v in zip(unique, p_N)}
     
     def Bayes(self, sample, *attributes):
@@ -281,15 +281,15 @@ p1 = [0,1,0,1,1,1,1,0,0,0]
 # w, b = train_model(test[0], sample[0], 0.0, 0.0, 4, 1)
 # print(gaussian_kernal(25.344555))
 # print(activation_(0.21020000).tanh())
-x_, y_ = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/dicisionDataset.csv').text_csv()
-xF, yF = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/iris.csv').featured_dataset()
+# x_, y_ = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/dicisionDataset.csv').text_csv()
+# xF, yF = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/iris.csv').featured_dataset()
 
 X = [[5.1, 3.5, 1.4, 0.2], [4.9, 3.0, 1.4, 0.2], [4.7, 3.2, 1.3, 0.2], 
         [4.6, 3.1, 1.5, 0.2], [5, 3.6, 1.4, 0.2], [5.4, 3.9, 1.7, 0.4]]
 Y = [0.072636, 3.172632, 4.9232334, 1.517612, 8.287214, 2.0292334]
 W = [0.0, 0.0, 0.0, 0.0]     # [random.random(), random.random(), random.random(), random.random()]
 
-print(multivariate_descent().gradient_descent(X, -3.87876, W, Y))
+print(multivariate_descent().gradient_descent(X, 0.0, W, Y))
 # print(kNN(xF, sample).nearest(yF, k=55))
 # (outlook, temp, humidity, wind) = ([], [], [], [])
 # for i in range(len(x_)):

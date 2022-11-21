@@ -46,9 +46,10 @@ class load_csv():
             def float_type_each(point):
                 try:
                     floats = float(point)
+                    return floats
                 except ValueError:
                     pass
-                return floats
+                
 
             # open file and manipulate as csvf instance
             with open(self.file, 'r') as csvf:
@@ -106,7 +107,7 @@ class load_csv():
                 return feature[1:], lable[1:]
             else:
                 # else return row upto, where you are selected
-                return feature[1:upto+1], lable[1:upto+1]
+                return feature[1:upto+1], lable[1:upto+1] 
         except IndexError:
             # return error if you are selected wrong column or row
             return "unexpected column/row in your dataset"
@@ -295,5 +296,5 @@ set = [3, 6, 9, 2, 7]
 # print(loss_function(pd, at).SSE())
 # print(covarince(at, pd))
 # print(load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/dicisionDataset.csv').text_csv())
-# print(load_csv(file).tail(2))
+# print(load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/dicisionDataset.csv').featured_dataset())
 # print(statistics(pd).mean())
