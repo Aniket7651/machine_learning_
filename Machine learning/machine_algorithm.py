@@ -7,6 +7,7 @@ This file have different type of machine learning algorithms
 from math import exp, log2
 import _DATA_processing as ln
 from find_Distances_ import euclidean, manhatten, cosine
+from array_processing import *
 
 class pre_processing():
     '''pre processing class is use for feature engineering creating the features and labels, 
@@ -48,36 +49,6 @@ def gradient_descent(x, y, w, b, alpha=0.0001):
     return w, b
 
 
-class multivariate_descent():
-    
-    def h0_x(self, X, b, W):
-        h0 = 0.0
-        for x, w in zip(X, W):
-            h0 += x*w
-        return h0+b
-
-    def cost_F(self, h0x, x_j, y_i):
-        loss = 0.0
-        for j in x_j:
-            loss += (h0x-y_i)*j
-        return loss
-
-    def GD(self, loss, W, instance, lr):
-        theta_w = []
-        for j in W:
-            theta_w.append((1/float(instance))*j-lr*loss)
-        return theta_w
-
-    def gradient_descent(self, X, b, W, Y, lr=0.01):
-        WUpdate = []
-        for i in range(len(X)):
-            h0 = self.h0_x(X[i], b, W)
-            cost = self.cost_F(h0, X[i], Y[i])
-            print(cost)
-            WUpdate.append(self.GD(cost, W, len(X), lr))
-        return WUpdate
-
-
 def train_model(x, y, w, b, epoch, check_loss, alpha=0.0001):
     for i in range(epoch):
         w, b = gradient_descent(x, y, w, b, alpha)
@@ -85,6 +56,27 @@ def train_model(x, y, w, b, epoch, check_loss, alpha=0.0001):
             print(f'l2 loss on epoch {i}: {ln.loss_function(y, x, w, b).L2_loss()}')
     return w, b
 
+
+def train_multivariate_model(X, y, epoch, lr=0.001):
+    m = shape(X)[0] 
+    one_met = ones((m, 1))
+
+    X = concatenate(one_met, X, axis=1)
+    n = shape(X)[1]
+    theta = ones1D(n)
+    hypothesis = dot1D_2D(X, theta)
+    cost = ones1D(epoch)
+    for i in range(0, epoch):
+        # print(shape(X), theta[0])
+        theta[0]=theta[0]-(lr/shape(X)[0])*sum([h-y_ for h, y_ in zip(hypothesis, y)])
+        for j in range(1, n):
+            # print('j: ', theta[j], X)
+            theta[j]=theta[j]-(lr/shape(X)[0])*sum([(h-y_)*X[i][j] for h, y_ in zip(hypothesis, y)])
+            # print('j af.: ', j)
+        hypothesis = dot1D_2D(X, theta)
+        cost[i]=1/(2*m)*sum([(h-y_)**2 for h, y_ in zip(hypothesis, y)])
+    
+    return cost, theta
 
 class LinearRegression():
 
@@ -284,12 +276,19 @@ p1 = [0,1,0,1,1,1,1,0,0,0]
 # x_, y_ = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/dicisionDataset.csv').text_csv()
 # xF, yF = ln.load_csv('A:/BIOINFORMAICS/Machine Learning/Machine learning/docs/iris.csv').featured_dataset()
 
+import matplotlib.pyplot as plt 
+
 X = [[5.1, 3.5, 1.4, 0.2], [4.9, 3.0, 1.4, 0.2], [4.7, 3.2, 1.3, 0.2], 
         [4.6, 3.1, 1.5, 0.2], [5, 3.6, 1.4, 0.2], [5.4, 3.9, 1.7, 0.4]]
-Y = [0.072636, 3.172632, 4.9232334, 1.517612, 8.287214, 2.0292334]
-W = [0.0, 0.0, 0.0, 0.0]     # [random.random(), random.random(), random.random(), random.random()]
-
-print(multivariate_descent().gradient_descent(X, 0.0, W, Y))
+Y = [7.2636, 17.2632, 92.32334, 51.7612, 28.7214, 29.24]
+iteration = [i for i in range(6)]
+loss = train_multivariate_model(X, Y, 6, lr=0.001)
+print(loss[1])
+plt.plot(iteration, loss[0], 'r')
+plt.title('Multivariable weight optimization')
+plt.xlabel('iteration')
+plt.ylabel('loss J(0)')
+plt.show()
 # print(kNN(xF, sample).nearest(yF, k=55))
 # (outlook, temp, humidity, wind) = ([], [], [], [])
 # for i in range(len(x_)):
