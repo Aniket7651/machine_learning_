@@ -93,8 +93,6 @@ def determinant_2x2(matrix):
     return matrix[0][0]*matrix[1][1]-matrix[1][0]*matrix[0][1]
 
 
-
-
 #################################### END OF THE PROGRAMS ######################################
 
 met = [['a','b','c','d', 2, 4],

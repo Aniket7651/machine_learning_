@@ -1,3 +1,10 @@
+"""
+Created on Nov 13 08:36:49 2022
+These file have seperate deep learning programs like artificial neural networks
+and etc other...
+@author: ANIKET YADAV
+"""
+
 from math import exp
 from machine_algorithm import gradient_descent
 import random

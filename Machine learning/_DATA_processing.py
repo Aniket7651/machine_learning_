@@ -150,6 +150,7 @@ class load_csv():
             # return error if you are selected wrong column or row
             return "unexpected column/row in your dataset"
 
+
 # there are many types of loss functions which use for finding accuracy of our alorithems
 # this is our goal to reduse error of our model by decrease losses, to getting the optimum value '*w' and '*b' 
 class loss_function():

@@ -4,15 +4,15 @@ This file have different type of machine learning algorithms
 @author: ANIKET YADAV
 """
 
+# importing all necessary file from other location...
 from math import exp, log2
 import _DATA_processing as ln
 from find_Distances_ import euclidean, manhatten, cosine
 from array_processing import *
 
 class pre_processing():
-    '''pre processing class is use for feature engineering creating the features and labels, 
-    the problem of converting raw data to a dataset which can be
-    read by machine is called feature engineering.'''
+    '''pre processing class is use for feature engineering, creating the features and labels, 
+    "The problem of converting raw data to a dataset which can be read by machine is called feature engineering." '''
 
     def __init__(self, x_i):
         self.x = x_i
@@ -36,47 +36,65 @@ class pre_processing():
         return (1/float(len(self.x)))*sum(self.x)
 
 
+# gradient descent are the machine optimizer that is use for optimize 
+# single featured, single labled machine model
+# function that's use by training model
 def gradient_descent(x, y, w, b, alpha=0.0001):
     w_d = 0.0
     b_d = 0.0
-    N = len(x)
+    N = len(x)  # N is define all the length of x feature set
     for j in range(N):
-        w_d += -2*x[j]*(y[j]-(w*x[j]+b))
+        # finding derivatives or update the value of weight and bias
+        w_d += -2*x[j]*(y[j]-(w*x[j]+b)) 
         b_d += -2*(y[j]-(w*x[j]+b))
 
     w = w - (1/float(N))*w_d*alpha
     b = b - (1/float(N))*b_d*alpha
-    return w, b
+    return w, b  # returns the tuple of final weight and bias
 
 
+# training the model by train_model function that will updates the value of 
+# w (weight) and b (bais) continually upto single epoch size
 def train_model(x, y, w, b, epoch, check_loss, alpha=0.0001):
     for i in range(epoch):
+        # gradient update first by above function
         w, b = gradient_descent(x, y, w, b, alpha)
         if i % check_loss == 0:
-            print(f'l2 loss on epoch {i}: {ln.loss_function(y, x, w, b).L2_loss()}')
-    return w, b
+            print(f'l2 loss on epoch {i}: {ln.loss_function(y, x, w, b).L2_loss()}') # print the loss at each mod of check_loss as mark
+            # here ln.loss_function(...).L2_loss() -> has been taken from data_prcessing file of these package
+    return w, b  # also returns two value weight and bias respectivally
 
 
+# now i'm train multivariate feature set by train_multivariate_model function 
+# i'm use here only my own created array functions ...
+# lr is just alpha value which is set 0.001 by default
 def train_multivariate_model(X, y, epoch, lr=0.001):
-    m = shape(X)[0] 
+    m = shape(X)[0]    # check the metrix shape mxn where we need to store only the value of m for now..
+    # make a metrix of 1, by function ones (taken from array_processing, all array function will be taken from array_processing file) 
     one_met = ones((m, 1))
 
+    # concatenate the metrix of ones as 1 axis[x-axis] 
     X = concatenate(one_met, X, axis=1)
-    n = shape(X)[1]
-    theta = ones1D(n)
-    hypothesis = dot1D_2D(X, theta)
-    cost = ones1D(epoch)
+    n = shape(X)[1]    # now find the value of n of the shape of the metrix... (use [1] here the value of n)
+    # seperate the theta by making a 1D array of n length
+    theta = ones1D(n)  
+    hypothesis = dot1D_2D(X, theta)   # in the next, calculate the dot product of the metrix of concatinated metrix and theta 1D metrix..
+    cost = ones1D(epoch)    # find the cost function upto desired epoch...
+    # these is the part that run above part at multiple times 
+    # it mean continue update the value of theta by X (concatenated metrix)
     for i in range(0, epoch):
-        # print(shape(X), theta[0])
-        theta[0]=theta[0]-(lr/shape(X)[0])*sum([h-y_ for h, y_ in zip(hypothesis, y)])
+        # print(shape(X), theta[0])    'loop continue upto epoch'
+        theta[0]=theta[0]-(lr/shape(X)[0])*sum([h-y_ for h, y_ in zip(hypothesis, y)]) # update first theta 
+        # then update j axis upto shape of X (n) from 1, because 0 is the theta[0] here...
         for j in range(1, n):
-            # print('j: ', theta[j], X)
-            theta[j]=theta[j]-(lr/shape(X)[0])*sum([(h-y_)*X[i][j] for h, y_ in zip(hypothesis, y)])
+            # print('j: ', theta[j], X)    'untill xj exists'
+            theta[j]=theta[j]-(lr/shape(X)[0])*sum([(h-y_)*X[i][j] for h, y_ in zip(hypothesis, y)])  # same update every theta of n
             # print('j af.: ', j)
-        hypothesis = dot1D_2D(X, theta)
+        hypothesis = dot1D_2D(X, theta)  # and final find dot product and cost of every xi data point
         cost[i]=1/(2*m)*sum([(h-y_)**2 for h, y_ in zip(hypothesis, y)])
     
-    return cost, theta
+    return cost, theta    # return tuple of final cost and most updated theta for prediction
+
 
 class LinearRegression():
 
@@ -122,6 +140,9 @@ def kernal_regression(w_i, Y):
 
 
 class kNN():
+    '''This is the another type of supervised, classification model known as k-nearest neighbor.
+    kNN is based on the k number of nearest data points from unknown data point, use different type of 
+    distance method to find the distance between the data points.'''
 
     def __init__(self, x_i, X):
         self.x_i = x_i
