@@ -304,12 +304,12 @@ X = [[5.1, 3.5, 1.4, 0.2], [4.9, 3.0, 1.4, 0.2], [4.7, 3.2, 1.3, 0.2],
 Y = [7.2636, 17.2632, 92.32334, 51.7612, 28.7214, 29.24]
 iteration = [i for i in range(6)]
 loss = train_multivariate_model(X, Y, 6, lr=0.001)
-print(loss[1])
+# print(loss[1])
 plt.plot(iteration, loss[0], 'r')
 plt.title('Multivariable weight optimization')
 plt.xlabel('iteration')
 plt.ylabel('loss J(0)')
-plt.show()
+# plt.show()
 # print(kNN(xF, sample).nearest(yF, k=55))
 # (outlook, temp, humidity, wind) = ([], [], [], [])
 # for i in range(len(x_)):

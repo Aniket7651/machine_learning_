@@ -4,6 +4,8 @@ Another type of data preprocessing file which is only contains the program that'
 @author: ANIKET YADAV
 """
 
+import random as rnd
+
 def concatenate(met_a, met_b, axis):
     e = []
     if axis == 1:
@@ -13,6 +15,7 @@ def concatenate(met_a, met_b, axis):
     elif axis == 0:
         return met_a+met_b
 
+
 def shape(metrix):
     (cols, rows) = (0, 0)
     for i in metrix:
@@ -20,6 +23,7 @@ def shape(metrix):
     for j in metrix[0]:
         cols+=1
     return (rows, cols)
+
 
 def ones(shape, multiply=1.0, type=float, metrixShape=1):
     metrix = []
@@ -32,6 +36,29 @@ def ones(shape, multiply=1.0, type=float, metrixShape=1):
         metrix.append(cols)
     return metrix*metrixShape
 
+
+def zeros(shape, type=float, metrixShape=1):
+    metrix = []
+    for r in range(shape[0]):
+        cols = []
+        for c in range(shape[1]):
+            if type == int:
+                cols.append(int(0.0))
+            else: cols.append(0.0)
+        metrix.append(cols)
+    return metrix*metrixShape
+
+
+def Random(shape, metrixShape=1):
+    metrix = []
+    for r in range(shape[0]):
+        cols = []
+        for c in range(shape[1]):
+            cols.append(rnd.random())
+        metrix.append(cols)
+    return metrix*metrixShape
+
+
 def ones1D(num, multiply=1.0, type=float):
     met = []
     for i in range(num):
@@ -39,6 +66,7 @@ def ones1D(num, multiply=1.0, type=float):
             met.append(int(1.*multiply))
         else: met.append(1.*multiply)
     return met
+
 
 def dot1D_2D(A, B):
     return [sum(i*j for i,j in zip(row, B)) for row in A]
@@ -53,6 +81,7 @@ def transform(mtrix):
         transf.append(lisr)
     return transf
 
+
 def addition(A, B):
     A_B = []
     for i in range(len(A)):
@@ -62,6 +91,7 @@ def addition(A, B):
         A_B.append(AB)
     return A_B
 
+
 def subtract(A, B):
     A_B = []
     for i in range(len(A)):
@@ -70,7 +100,8 @@ def subtract(A, B):
             AB.append(a-b)
         A_B.append(AB)
     return A_B
-    
+
+
 def add_2D_1D(A, B):
     A_B = []
     for a in A:
@@ -80,6 +111,7 @@ def add_2D_1D(A, B):
         A_B.append(ab)
     return A_B
 
+
 def subt_2D_1D(A, B):
     A_B = []
     for a in A:
@@ -88,6 +120,7 @@ def subt_2D_1D(A, B):
             ab.append(a[i]-B[0][i])
         A_B.append(ab)
     return A_B
+
 
 def determinant_2x2(matrix):
     return matrix[0][0]*matrix[1][1]-matrix[1][0]*matrix[0][1]
@@ -101,4 +134,12 @@ met = [['a','b','c','d', 2, 4],
        ['m','n','o','p', 5, 1],
        ['q','r','s','t', 6, 0]]
 
-print(transform(met))
+x = [[1.0, 1.0, 1.0, 1.0]]
+a = [1, -1]
+b = [[2, 2, 2], [1, 1, 1]]
+w = [[1.0, 1.0, 1.0, 1.0], [1.0, 1.0, 1.0, 1.0], [1.0, 1.0, 1.0, 1.0]]
+wx = [[3.0, 3.0, 3.0]]
+print(zeros((3,72)))
+
+
+
